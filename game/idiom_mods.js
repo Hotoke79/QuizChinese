@@ -2,7 +2,7 @@ const emergency = {
   "name": "Срочность, неотложность",
   "descriptio": [
     "hang on by one's eyelids</br>比喻情况万分危急</br>bǐ yù qíng kuàng wàn fēn wēi jí",
-    "no time to delay</br>指形势紧迫，一刻也不允许拖延</br>zhǐ xíng shì jǐn pò ， yī kè yě bù yǔn xǔ tuō yán",
+    "no time to delay</br>指形势紧迫，一刻也不允许拖延</br>zhǐ xíng shì jǐn pò ， yī kè yě bù yǔn xǔ tuō yán</br>brook no delay; demand immediate attention; be of great urgency",
     "jumped at",
     "posthaste</br> 形容事情紧急到了极点（多用于公文、电报等)</br>  xíng róng shì qíng jǐn jí dào liǎo jí diǎn (duō yòng yú gōng wén, diàn bào děng)",
     "a desperate situation</br>火烧到眉毛。比喻事到眼前，非常急迫</br>huǒ shāo dào méi máo 。 bǐ yù shì dào yǎn qián, fēi cháng jí pò",
