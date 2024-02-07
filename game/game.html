@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="touch-sideswipe.min.css">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="wrap">
+  <div id="touchSideSwipe" class="touch-side-swipe">
+    <div id="links_box">
+      <img src="ChengLogo6.png" alt="LOGO" />
+    </div>
+    <a style="padding: 0;" href="#">
+      <p style="font-size: 0.8rem; text-align: center; padding: .3rem; margin: 0;">quiz-chinese.ru</p>
+    </a>
+
+    <nav>
+      <ul id="menu">
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+
+    <div class="containerGame">
+      <!-- <script src="mods.json"></script> -->
+      <script src="idiom_mods.js"></script>
+      <script src="game.js">
+      </script>
+    </div>
+  </div>
+</div>
+  <script src="touch-sideswipe.min.js"></script>
+  <script type="text/javascript">
+    var config = {
+      elementID: 'touchSideSwipe',
+      elementWidth: 400, //px
+      elementMaxWidth: 0.8, // *100%
+      sideHookWidth: 44, //px
+      moveSpeed: 0.2, //sec
+      opacityBackground: 0.5,
+      shiftForStart: 50, // px
+      windowMaxWidth: 2024, // px
+    }
+    var touchSideSwipe = new TouchSideSwipe(config);
+  </script>
+</body>
+
+</html>
