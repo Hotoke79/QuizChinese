@@ -4,7 +4,7 @@ const emergency = {
     "a hundred weight hanging by a hair—in imminent peril</br>在这****, 万分危急的时候, 援军到了</br>Zài zhè qiānjūnyīfà, wànfēn wēijí de shíhou, yuánjūn dàoliǎo.</br>In this moment of extreme crisis when everything was hanging by a single thread, the relief troops arrived.",
     "brook no delay; demand immediate attention; be of great urgency</br>****的行动</br>action which brooks no delay",
     "very impatient; unable to hold back; too impatient to wait; anxious to do sth</br>他们都****地想知道发生了什么事。</br>Tāmen dōu pòbùjídài de xiǎng zhīdao fāshēng le shénme shì.</br>They were impatient to know what had happened",
-    "most urgent; post-haste; express; Most Urgent [formerly on dispatches]</br>****的电报</br>",
+    "most urgent; post-haste; express; Most Urgent [formerly on dispatches]</br>****的电报",
     "The fire is singeing the eyebrows.—a desperate situation; at a crucial point</br>****的事儿</br>matter of the utmost urgency",
     "as pressing as a fire singeing one's eyebrows—extremely urgent</br>母亲寄来两万块钱, 解了我****</br>Mǔqin jìlái liǎngwàn kuài qián, jiě le wǒ ránméizhījí.</br>Mother sent me 20,000 yuan addressing my pressing need."
   ],
