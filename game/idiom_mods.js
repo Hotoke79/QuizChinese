@@ -1,15 +1,15 @@
 const emergency = {
   "name": "Срочность, неотложность",
   "descriptio": [
-    "hang on by one's eyelids</br>比喻情况万分危急</br>bǐ yù qíng kuàng wàn fēn wēi jí",
-    "no time to delay</br>指形势紧迫，一刻也不允许拖延</br>zhǐ xíng shì jǐn pò ， yī kè yě bù yǔn xǔ tuō yán</br>brook no delay; demand immediate attention; be of great urgency",
-    "jumped at",
-    "posthaste</br> 形容事情紧急到了极点（多用于公文、电报等)</br>  xíng róng shì qíng jǐn jí dào liǎo jí diǎn (duō yòng yú gōng wén, diàn bào děng)",
-    "a desperate situation</br>火烧到眉毛。比喻事到眼前，非常急迫</br>huǒ shāo dào méi máo 。 bǐ yù shì dào yǎn qián, fēi cháng jí pò",
-    "an extremely urgency</br>"
+    "a hundred weight hanging by a hair—in imminent peril</br>在这****, 万分危急的时候, 援军到了</br>Zài zhè qiānjūnyīfà, wànfēn wēijí de shíhou, yuánjūn dàoliǎo.</br>In this moment of extreme crisis when everything was hanging by a single thread, the relief troops arrived.",
+    "brook no delay; demand immediate attention; be of great urgency</br>****的行动</br>action which brooks no delay",
+    "very impatient; unable to hold back; too impatient to wait; anxious to do sth</br>他们都****地想知道发生了什么事。</br>Tāmen dōu pòbùjídài de xiǎng zhīdao fāshēng le shénme shì.</br>They were impatient to know what had happened",
+    "most urgent; post-haste; express; Most Urgent [formerly on dispatches]</br>****的电报</br>",
+    "The fire is singeing the eyebrows.—a desperate situation; at a crucial point</br>****的事儿</br>matter of the utmost urgency",
+    "as pressing as a fire singeing one's eyebrows—extremely urgent</br>母亲寄来两万块钱, 解了我****</br>Mǔqin jìlái liǎngwàn kuài qián, jiě le wǒ ránméizhījí.</br>Mother sent me 20,000 yuan addressing my pressing need."
   ],
   "reveal":[
-    "千钧一发</br>qiān jūn yī fà",
+    "千钧一发</br>qiān jūn yī fà</br>a matter of life or death",
     "刻不容缓</br>kè bù róng huǎn",
     "迫不及待</br>pò bù jí dài",
     "十万火急</br>shí wàn huǒ jí",
