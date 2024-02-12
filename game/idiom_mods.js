@@ -21,13 +21,13 @@ const emergency = {
 const insects = {
   "name":"Насекомые",
   "descriptio":[
-    "seeking one's own doom</br>",
-    "disappearance act from an entangled situation</br>蝉变为成虫时要脱去一层壳。比喻用计脱身，使人不能及时发觉</br>chán biàn wéi chéng chóng shí yào tuō qù yī céng ké 。 bǐ yù yòng jì tuō shēn ， shǐ rén bù néng jí shí fā jué",
-    "succeed in the imperial examination</br>",
-    "nibble and gobble</br>比喻用各种方式侵占吞并</br>bǐ yù yòng gè zhǒng fāng shì qīn zhān tūn bìng",
-    "指蜻蜓在水面飞行时用尾部轻触水面的动作。比喻做事肤浅不深入</br>zhǐ qīng tíng zài shuǐ miàn fēi xíng shí yòng wěi bù qīng chù shuǐ miàn de dòng zuò 。 bǐ yù zuò shì fū qiǎn bù shēn rù",
-    "比喻自不量力，招致失败。同“螳臂当车</br>bǐ yù zì bù liáng lì ， zhāo zhì shī bài 。 tóng táng bì dāng chē",
-    "比喻事情所留下的隐约可寻的痕迹和线索</br>bǐ yù shì qíng suǒ liú xià de yǐn yuē kě xún de hén jì hé xiàn suǒ",
+    "a moth darting into a flame—bring destruction upon oneself; seek one's own doom</br>",
+    "slip out of a predicament like a cicada sloughing its skin—escape by cunning manoeuvring</br>",
+    "pluck the laurel branch from the Toad Palace—succeed in the highest imperial examinations</br>",
+    "nibble like a silkworm or swallow like a whale—seize another country's territory by piecemeal encroachment or wholesale annexation; annex and encroach upon (another country's territory)</br>",
+    "like a dragon fly skimming the surface of the water—just touch on sth. lightly without going into it deeply",
+    "a mantis trying to obstruct a chariot—overrate oneself and try to hold back an overwhelming force</br>",
+    "thread of a spider and trail of a horse—clues; traces",
     "covet gains ahead without being aware of danger behind as the mantis stalk the cicade,unaware of the oriole behind"
   ],
   "reveal":[
@@ -35,9 +35,9 @@ const insects = {
     "金蝉脱壳</br>jīn chán tuō qiào",
     "蟾宫折桂</br>chán gōng zhé guì",
     "蚕食鲸吞</br>cán shí jīng tūn",
-    "蜻蜓点水</br>qīng tíng diǎn shuǐ",
+    "蜻蜓点水</br>qīng tíng diǎn shuǐ</br>做调查工作不能蜻蜓点水, 要深入实际</br>Zuò diàochá gōngzuò bù néng qīngtíngdiǎnshuǐ, yào shēnrù shíjì.</br>To make an investigation, one should go into matters deeply, not just scratch the surface.",
     "螳臂挡车</br>táng bì dǎng chē",
-    "蛛丝马迹</br>zhū sī mǎ jì",
+    "蛛丝马迹</br>zhū sī mǎ jì</br>此案有蛛丝马迹可寻。</br>There are clues in the case.",
     "螳螂捕蝉，黄雀在后</br>táng láng bǔ chán，huáng què zài hòu"
   ]
 }
