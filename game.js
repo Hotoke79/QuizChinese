@@ -59,12 +59,80 @@ rgt.setAttribute("id", "right")
 rightWrong2.appendChild(wrng)
 rightWrong2.appendChild(rgt)
 
+const downLoad = document.getElementById('downLoad')
+
 const wsl = document.createElement('div')
 wsl.setAttribute("id", "wordSpotLight")
 const kbd = document.createElement('div')
 kbd.setAttribute("id", "keyboard")
 containerGame.append(about, desc_cont, rWr, rightWrong2, wsl, kbd)
 containerGame.style.display='none'
+
+const mailForm = document.createElement('div')
+mailForm.setAttribute("id", "mail_form")
+// mailForm.innerHTML = "Mail Form"
+const h1 = document.createElement('h1')
+h1.innerText= "Send a feedback"
+
+const contact_wrap = document.createElement('div')
+contact_wrap.setAttribute("id", "contact_wrap")
+
+const notify = document.createElement('div')
+notify.setAttribute("id", "notify")
+
+
+const contactForm = document.createElement('form')
+contactForm.setAttribute("id", "contact-form")
+
+const inputHidden = document.createElement('input')
+inputHidden.setAttribute("type", "hidden")
+inputHidden.setAttribute("name", "contact_number")
+
+const lableName = document.createElement('label')
+lableName.innerText = "Name"
+lableName.style.textAlign="center"
+
+const inputName = document.createElement('input')
+inputName.setAttribute("id","name_inp")
+inputName.setAttribute("name", "nme")
+inputName.setAttribute("placeholder", "Ваше имя (не обязательно)")
+
+const lableEmail = document.createElement('label')
+lableEmail.innerText = "E-mail"
+lableEmail.style.textAlign="center"
+
+const inputMail = document.createElement('input')
+inputMail.setAttribute("id","em_inp")
+inputMail.setAttribute("placeholder", "Е-mail для обратной связи")
+inputMail.setAttribute("type", "email")
+inputMail.setAttribute("name", "eml")
+inputMail.setAttribute("required", "true")
+
+const lableMessage = document.createElement('label')
+lableMessage.innerText = "Message"
+lableMessage.style.textAlign="center"
+
+const textArea = document.createElement('textarea')
+textArea.setAttribute("placeholder", "Текст сообщения")
+textArea.setAttribute("id", "text_inp")
+textArea.setAttribute("name", "mssge")
+textArea.setAttribute("required", "true")
+textArea.setAttribute("cols", "24")
+textArea.setAttribute("rows", "10")
+
+const submitButton =document.createElement('input')
+submitButton.setAttribute("id", "formSendBtn")
+submitButton.setAttribute("type", "submit")
+submitButton.setAttribute("value", "Send")
+
+contactForm.append(inputHidden,lableName,inputName, lableEmail,inputMail,lableMessage,textArea, submitButton)
+
+contact_wrap.append(notify, contactForm)
+
+mailForm.append(h1,contact_wrap)
+mailForm.style.display="none"
+
+document.body.appendChild(mailForm)
 
 let answer = ''
 const maxWrong = 4
@@ -80,9 +148,25 @@ let sr = 0
 
 const menu = document.getElementById('menu');
 
+const openEmail =()=>{
+  aboutGame.style.display = 'none'
+  containerGame.style.display= 'none'
+  mailForm.style.display="flex"
+}
+
+let defaultInstallEvent = null
+window.addEventListener('beforeinstallprompt', (event)=>{
+  event.preventDefault()
+  defaultInstallEvent=event
+})
+downLoad.addEventListener('click', (event)=>{
+  defaultInstallEvent.prompt()
+})
+
 function aboutReveal(){
   aboutGame.style.display = 'flex'
   containerGame.style.display= 'none'
+  mailForm.style.display="none"
 }
 
 function shuffle(obj1, obj2) {
@@ -119,6 +203,7 @@ roundsJs.forEach(function (el, inx, arr) {
 
     aboutGame.style.display = 'none'
     containerGame.style.display= 'flex'
+    mailForm.style.display="none"
     current = 0
     spanR.innerHTML = "0"
     spanW.innerHTML = "0"
