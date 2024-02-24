@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
   <link rel="stylesheet" href="game.css">
   <link rel="stylesheet" href="touch-sideswipe.min.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>成语师傅</title>
   <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -28,14 +29,27 @@
 </head>
 
 <body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init('kBE-Xr9xQzrNzZauX');
+    })();
+</script>
+<script src="./mail.js"></script>
 <div class="wrap">
   <div id="touchSideSwipe" class="touch-side-swipe">
     <div id="links_box">
-      <img src="Cheng.png" alt="LOGO" />
+      <img src="ChengLogo6.png" alt="LOGO" />
     </div>
 
       <div id="about_game" onclick="aboutReveal()">
         <p style="cursor: pointer; color: green; font-weight: bold; font-size: large;">About the Game</p>
+      </div>
+      <div id="downLoad">
+        <p style="cursor: pointer; color: rgba(60, 0, 128, 0.8); font-weight: bold; font-size: large; text-align: center; margin: 0;">Download</p>
+      </div>
+      <div id="sendEmail" onclick="openEmail()">
+        <p style="cursor: pointer; color: rgba(60, 0, 128, 0.8); font-weight: bold; font-size: large; text-align: center; margin: 3% 0;">Contacts</p>
       </div>
 
     <nav>

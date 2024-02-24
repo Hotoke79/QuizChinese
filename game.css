@@ -372,3 +372,80 @@ border-radius: 50%;
     color: rgb(1, 177, 252);
     font-size: 1.5rem;
 }
+
+/* Description block */
+
+#imgDiv{
+    display: flex;
+    justify-content: space-around;
+    background-color: #eef2f3;
+    height: 30vh;
+}
+@media (max-width: 515px) {
+    #imgDiv{
+        height: fit-content;
+        flex-direction: column;
+    }
+}
+
+/* Mail Form */
+
+#mail_form{
+    flex-direction: column;
+    background: linear-gradient(0deg, #8e9eab, #eef2f3);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#mail_form h1{
+    color: #1435f1;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 30vh;
+}
+
+#name_inp{
+    color: #3d14f1;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+}
+
+#em_inp{
+    color: #3d14f1;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+}
+#notify{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#notify .notify_submit {
+    color: rgb(124, 243, 6);
+}
+
+#notify .notify_submit_fail {
+    color: rgb(248, 86, 86);
+}
+
+#text_inp{
+    color: #3d14f1;
+    padding: 2px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#formSendBtn{
+    width: 30%;
+    margin-top: 2%;
+    padding: 0.2rem;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    border-radius: 10%;
+}
