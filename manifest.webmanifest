@@ -4,7 +4,7 @@
     "orientation": "portrait",
     "display": "fullscreen",
     "icons": [{
-        "src": "ChengLogo6.png",
+        "src": "Cheng.png",
         "sizes": "512x512",
         "type": "image/png"
     }]
