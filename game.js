@@ -3,7 +3,7 @@ const containerGame = document.querySelector('.containerGame')
 const aboutGame = document.createElement('div')
 aboutGame.innerHTML = guidance
 aboutGame.setAttribute("id", "about_game")
-document.body.appendChild(aboutGame)
+aboutGame.style.display = 'none'
 
 const about = document.createElement('div')
 about.setAttribute("class", "titleAbout")
@@ -66,13 +66,13 @@ wsl.setAttribute("id", "wordSpotLight")
 const kbd = document.createElement('div')
 kbd.setAttribute("id", "keyboard")
 containerGame.append(about, desc_cont, rWr, rightWrong2, wsl, kbd)
-containerGame.style.display='none'
+containerGame.style.display = 'none'
 
 const mailForm = document.createElement('div')
 mailForm.setAttribute("id", "mail_form")
 // mailForm.innerHTML = "Mail Form"
 const h1 = document.createElement('h1')
-h1.innerText= "Send a feedback"
+h1.innerText = "Send a feedback"
 
 const contact_wrap = document.createElement('div')
 contact_wrap.setAttribute("id", "contact_wrap")
@@ -90,19 +90,19 @@ inputHidden.setAttribute("name", "contact_number")
 
 const lableName = document.createElement('label')
 lableName.innerText = "Name"
-lableName.style.textAlign="center"
+lableName.style.textAlign = "center"
 
 const inputName = document.createElement('input')
-inputName.setAttribute("id","name_inp")
+inputName.setAttribute("id", "name_inp")
 inputName.setAttribute("name", "nme")
 inputName.setAttribute("placeholder", "Ваше имя (не обязательно)")
 
 const lableEmail = document.createElement('label')
 lableEmail.innerText = "E-mail"
-lableEmail.style.textAlign="center"
+lableEmail.style.textAlign = "center"
 
 const inputMail = document.createElement('input')
-inputMail.setAttribute("id","em_inp")
+inputMail.setAttribute("id", "em_inp")
 inputMail.setAttribute("placeholder", "Е-mail для обратной связи")
 inputMail.setAttribute("type", "email")
 inputMail.setAttribute("name", "eml")
@@ -110,7 +110,7 @@ inputMail.setAttribute("required", "true")
 
 const lableMessage = document.createElement('label')
 lableMessage.innerText = "Message"
-lableMessage.style.textAlign="center"
+lableMessage.style.textAlign = "center"
 
 const textArea = document.createElement('textarea')
 textArea.setAttribute("placeholder", "Текст сообщения")
@@ -120,25 +120,73 @@ textArea.setAttribute("required", "true")
 textArea.setAttribute("cols", "24")
 textArea.setAttribute("rows", "10")
 
-const submitButton =document.createElement('input')
+const submitButton = document.createElement('input')
 submitButton.setAttribute("id", "formSendBtn")
 submitButton.setAttribute("type", "submit")
 submitButton.setAttribute("value", "Send")
 
-contactForm.append(inputHidden,lableName,inputName, lableEmail,inputMail,lableMessage,textArea, submitButton)
+contactForm.append(inputHidden, lableName, inputName, lableEmail, inputMail, lableMessage, textArea, submitButton)
 
 contact_wrap.append(notify, contactForm)
 
-mailForm.append(h1,contact_wrap)
-mailForm.style.display="none"
+mailForm.append(h1, contact_wrap)
+mailForm.style.display = "none"
 
-document.body.appendChild(mailForm)
+//document.body.appendChild(mailForm)
+
+
+const canvasContainer = document.createElement('div')
+canvasContainer.setAttribute('id', 'canvasContainer')
+
+const canvas = document.createElement('canvas')
+canvas.setAttribute('id', 'canvas')
+
+const overlay = document.createElement('div')
+overlay.setAttribute('id', 'overlay')
+overlay.innerHTML = "To enter menu klick the burger icon at the left upper corner or swipe left"
+
+canvasContainer.append(overlay, canvas)
+
+document.body.append(canvasContainer, aboutGame, mailForm)
+
+var ctx = canvas.getContext('2d');
+
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+var texts = '成语师傅'.split('');
+
+var fontSize = 56;
+var columns = canvas.width / fontSize;
+var drops = [];
+for (var x = 0; x < columns; x++) {
+  drops[x] = 1;
+}
+
+function draw() {
+  ctx.fillStyle = '#8e9eab';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'rgb(220, 252, 220)';
+  ctx.font = fontSize + 'px arial';
+  for (var i = 0; i < drops.length; i++) {
+    var text = texts[Math.floor(Math.random() * texts.length)];
+    ctx.fillText(text, i * fontSize, drops[i / 2] * fontSize);
+
+    if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(draw, 330);
 
 let answer = ''
 const maxWrong = 4
 let mistakes = 0
 let clicked = []
-let wordStatus = null
+let wordStatus
 
 let right = []
 let wrong = []
@@ -148,25 +196,18 @@ let sr = 0
 
 const menu = document.getElementById('menu');
 
-const openEmail =()=>{
+const openEmail = () => {
   aboutGame.style.display = 'none'
-  containerGame.style.display= 'none'
-  mailForm.style.display="flex"
+  containerGame.style.display = 'none'
+  mailForm.style.display = "flex"
+  canvasContainer.style.display = "none"
 }
 
-let defaultInstallEvent = null
-window.addEventListener('beforeinstallprompt', (event)=>{
-  event.preventDefault()
-  defaultInstallEvent=event
-})
-downLoad.addEventListener('click', (event)=>{
-  defaultInstallEvent.prompt()
-})
-
-function aboutReveal(){
+function aboutReveal() {
   aboutGame.style.display = 'flex'
-  containerGame.style.display= 'none'
-  mailForm.style.display="none"
+  containerGame.style.display = 'none'
+  mailForm.style.display = "none"
+  canvasContainer.style.display = "none"
 }
 
 function shuffle(obj1, obj2) {
@@ -194,36 +235,8 @@ const extract = (origArr) => {
   return newArr
 }
 
-roundsJs.forEach(function (el, inx, arr) {
-  shuffle(roundsJs[inx]['reveal'], roundsJs[inx]['descriptio'])
-  let l = document.createElement('li')
-  l.innerHTML = el['name']
-  l.addEventListener('click', function () {
-    period(el, el['name'])
-
-    aboutGame.style.display = 'none'
-    containerGame.style.display= 'flex'
-    mailForm.style.display="none"
-    current = 0
-    spanR.innerHTML = "0"
-    spanW.innerHTML = "0"
-    sw = 0
-    sr = 0
-    wrong = []
-    wrng.innerHTML = ""
-    right = []
-    rgt.innerHTML = ""
-    percents = 0
-    bar.style.height = 0
-    perc.innerHTML = "0%"
-
-  })
-  menu.appendChild(l)
-})
-
 function period(e, elName) {
-  // var btnReload1 = `<button id="reload1" onClick="location.reload()">Swipe left to start the game or Click to select another category</button>`;
-  // document.getElementById('menu').innerHTML = btnReload1;
+
   about.innerHTML = elName
 
   var totalIdioms = extract(e['reveal']).length
@@ -234,14 +247,11 @@ function period(e, elName) {
   reveal.innerHTML = e['reveal'][current]
   function generateAnswer() {
     answer = extract(e['reveal'])[current]
+    console.log(answer)
   }
   function reloadButt() {
-    var btnReload = `<button id="reload" onClick="location.reload()">Reload the game</button>`;
+    var btnReload = `<h3 style="color: green;">Right: ${sw}</h3>__<h3 style="color: red;">Wrong: ${sr}</h3>`;
     descr.innerHTML = btnReload;
-  }
-  function reloadButt1() {
-    var btnReload1 = `<button id="reload1" onClick="location.reload()">Click to select another game category</button>`;
-    document.getElementById('menu').innerHTML = btnReload1;
   }
 
   var chnCount = 0
@@ -315,9 +325,8 @@ function period(e, elName) {
   function clearAll() {
     kbd.innerHTML = "";
     descr.innerHTML = "";
-    wsl.style.display = 'none';
-    prgrss.style.display = 'none';
-    rightWrong2.style.display = 'initial';
+    rgt.style.display = 'flex'
+    wrng.style.display = 'flex'
     rightWrong2.style.display = 'flex';
     rightWrong2.style.justifyContent = 'space-between';
     rightWrong2.style.height = '5vh';
@@ -340,7 +349,6 @@ function period(e, elName) {
     } else {
       clearAll();
       reloadButt();
-      reloadButt1();
     }
   }
 
@@ -348,3 +356,47 @@ function period(e, elName) {
   generateButtons()
   generateAnswer()
 }
+
+const reset = () => {
+  current = 0
+  sw = 0
+  sr = 0
+  wrong = []
+  wrng.innerHTML = ""
+  right = []
+  rgt.innerHTML = ""
+  percents = 0
+  spanR.innerHTML = "0"
+  spanW.innerHTML = "0"
+  bar.style.height = 0
+  perc.innerHTML = "0%"
+  rgt.style.display = 'none'
+  wrng.style.display = 'none'
+  aboutGame.style.display = 'none'
+  containerGame.style.display = 'flex'
+  mailForm.style.display = "none"
+  canvasContainer.style.display = "none"
+}
+
+roundsJs.forEach(function (el, inx, arr) {
+    shuffle(roundsJs[inx]['reveal'], roundsJs[inx]['descriptio'])
+    let l = document.createElement('li')
+    l.innerHTML = el['name']
+    l.addEventListener('click', function () {
+
+      reset()
+
+      period(el, el['name'])
+
+    })
+    menu.appendChild(l)
+  })
+
+let defaultInstallEvent = null
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault()
+  defaultInstallEvent = event
+})
+downLoad.addEventListener('click', (event) => {
+  defaultInstallEvent.prompt()
+})
