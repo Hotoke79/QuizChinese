@@ -330,6 +330,8 @@ function period(e, elName) {
   function clearAll() {
     kbd.innerHTML = "";
     descr.innerHTML = "";
+    rgt.style.display = 'flex'
+    wrng.style.display = 'flex'
     rightWrong2.style.display = 'flex';
     rightWrong2.style.justifyContent = 'space-between';
     rightWrong2.style.height = '5vh';
@@ -376,6 +378,8 @@ const reset = () => {
   spanW.innerHTML = "0"
   bar.style.height = 0
   perc.innerHTML = "0%"
+  rgt.style.display = 'none'
+  wrng.style.display = 'none'
   aboutGame.style.display = 'none'
   containerGame.style.display = 'flex'
   mailForm.style.display = "none"

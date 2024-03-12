@@ -121,6 +121,11 @@ const iterable = function () {
           "守株待兔</br>shǒu zhū dài tù",
           "鹤发童颜</br>hè fà tóng yán"
         ]
+      },
+      {
+        "name": "TEST",
+        "descriptio": ["all things take on"],
+        "reveal": ["抱头鼠窜</br>bào tóu shǔ cuàn",]
       }
     ]
   )
