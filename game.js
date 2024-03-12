@@ -141,7 +141,7 @@ canvas.setAttribute('id', 'canvas')
 
 const overlay = document.createElement('div')
 overlay.setAttribute('id', 'overlay')
-overlay.innerHTML = "To enter menu klick the burger icon at the left upper corner or swipe left"
+overlay.innerHTML = "To enter menu klick the burger icon at the left upper corner or swipe right"
 
 canvasContainer.append(overlay, canvas)
 
