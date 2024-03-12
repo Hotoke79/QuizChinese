@@ -26,6 +26,7 @@ notGsd.innerHTML = "Wrong"
 const spanW = document.createElement('span')
 spanW.setAttribute("id", "scoreWrong")
 spanW.innerHTML = 0
+
 notGsd.appendChild(spanW)
 rWr.appendChild(notGsd)
 
@@ -52,6 +53,7 @@ rWr.appendChild(gsd)
 
 const rightWrong2 = document.createElement('div')
 rightWrong2.setAttribute("id", "rightWrong2")
+
 const wrng = document.createElement('div')
 wrng.setAttribute("id", "wrong")
 const rgt = document.createElement('div')
@@ -70,7 +72,6 @@ containerGame.style.display = 'none'
 
 const mailForm = document.createElement('div')
 mailForm.setAttribute("id", "mail_form")
-// mailForm.innerHTML = "Mail Form"
 const h1 = document.createElement('h1')
 h1.innerText = "Send a feedback"
 
@@ -132,9 +133,6 @@ contact_wrap.append(notify, contactForm)
 mailForm.append(h1, contact_wrap)
 mailForm.style.display = "none"
 
-//document.body.appendChild(mailForm)
-
-
 const canvasContainer = document.createElement('div')
 canvasContainer.setAttribute('id', 'canvasContainer')
 
@@ -150,7 +148,6 @@ canvasContainer.append(overlay, canvas)
 document.body.append(canvasContainer, aboutGame, mailForm)
 
 var ctx = canvas.getContext('2d');
-
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
@@ -272,8 +269,16 @@ function period(e, elName) {
 
     incChunk()
 
+    function equalizer(arr) {
+      let lst = new Set()
+      for (i = 0; i < arr.length; i++) {
+        lst.add(arr[i])
+      }
+      return Array.from(lst)
+    }
+
     var a = chnk[chnCount].join('')
-    var buttonHTML = a.split('').sort(() => Math.random() - 0.5).map(L =>
+    var buttonHTML = equalizer(a.split('')).sort(() => Math.random() - 0.5).map(L =>
       `<div class="btnp" id='` + L + `'onClick="handleGuess('` + L + `')">` + L + `</div>`).join('')
     kbd.innerHTML = buttonHTML;
   }
@@ -325,8 +330,6 @@ function period(e, elName) {
   function clearAll() {
     kbd.innerHTML = "";
     descr.innerHTML = "";
-    rgt.style.display = 'flex'
-    wrng.style.display = 'flex'
     rightWrong2.style.display = 'flex';
     rightWrong2.style.justifyContent = 'space-between';
     rightWrong2.style.height = '5vh';
@@ -341,7 +344,7 @@ function period(e, elName) {
     if (current <= totalIdioms - 1) {
       mistakes = 0;
       clicked = [];
-      wsl.innerHTML = ""
+      wsl.innerHTML = "* * * *"
       descr.innerHTML = e['descriptio'][current];
       reveal.innerHTML = e['reveal'][current];
       generateAnswer();
@@ -357,7 +360,10 @@ function period(e, elName) {
   generateAnswer()
 }
 
+
 const reset = () => {
+  mistakes = 0
+  clicked = []
   current = 0
   sw = 0
   sr = 0
@@ -370,8 +376,6 @@ const reset = () => {
   spanW.innerHTML = "0"
   bar.style.height = 0
   perc.innerHTML = "0%"
-  rgt.style.display = 'none'
-  wrng.style.display = 'none'
   aboutGame.style.display = 'none'
   containerGame.style.display = 'flex'
   mailForm.style.display = "none"
@@ -379,18 +383,17 @@ const reset = () => {
 }
 
 roundsJs.forEach(function (el, inx, arr) {
-    shuffle(roundsJs[inx]['reveal'], roundsJs[inx]['descriptio'])
-    let l = document.createElement('li')
-    l.innerHTML = el['name']
-    l.addEventListener('click', function () {
+  shuffle(roundsJs[inx]['reveal'], roundsJs[inx]['descriptio'])
+  let l = document.createElement('li')
+  l.innerHTML = el['name']
+  l.addEventListener('click', function () {
 
-      reset()
+    reset()
+    period(el, el['name'])
 
-      period(el, el['name'])
-
-    })
-    menu.appendChild(l)
   })
+  menu.appendChild(l)
+})
 
 let defaultInstallEvent = null
 window.addEventListener('beforeinstallprompt', (event) => {

@@ -91,7 +91,9 @@ body {
     display: flex;
     flex-direction: column;
     width: calc(100vw*0.5);
+    min-width: 280px;
     height: 100svh;
+    min-height: 500px;
     justify-content: space-between;
     align-items: center;
     /* background:linear-gradient(rgba(221, 248, 248),rgb(197, 240, 179)); */
@@ -279,9 +281,9 @@ body {
     width: 95%;
     height: 15vh;
     justify-content: space-between;
-    display: none;
     gap: 20%;
     z-index: 12;
+    display: none;
 }
 
 #right {
