@@ -382,8 +382,9 @@ const reset = () => {
   canvasContainer.style.display = "none"
 }
 
-roundsJs.forEach(function (el, inx, arr) {
-  shuffle(roundsJs[inx]['reveal'], roundsJs[inx]['descriptio'])
+var itr = iterable()
+itr.forEach(function (el, inx, arr) {
+  shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
   let l = document.createElement('li')
   l.innerHTML = el['name']
   l.addEventListener('click', function () {
