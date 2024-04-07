@@ -123,6 +123,25 @@ const iterable = function () {
         ]
       },
       {
+        "name": "Spring",
+        "descriptio": [
+          "sunlit and enchanting scene of spring; lovely spring sunshine",
+          "riot (or blaze) of colour",
+        ],
+        "reveal": [
+        "春光明媚</br>chūn guāng míng mèi",
+        "万紫千红</br>wàn zǐ qiān hóng</br> 百花盛开，万紫千红",
+        "春雨如油</br>chūn yǔ rú yóu",
+        "生机勃勃</br>shēng jī bó bó",
+        "春色满园</br>chūn sè mǎn yuán",
+        "春意盎然</br>chūn yì àng rán",
+        "鸟语花香</br>niǎo yǔ huā xiāng",
+        "春暖花开</br>chūn nuǎn huā kāi",
+        "百花齐放</br>bǎi huā qí fàng",
+        "和风细雨</br>hé fēng xì yǔ"
+      ]
+      },
+      {
         "name": "TEST",
         "descriptio": ["all things take on"],
         "reveal": ["抱头鼠窜</br>bào tóu shǔ cuàn",]
