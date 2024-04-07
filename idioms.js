@@ -125,8 +125,8 @@ const iterable = function () {
       {
         "name": "Spring",
         "descriptio": [
-          "sunlit and enchanting scene of spring; lovely spring sunshine",
-          "riot (or blaze) of colour; thousands of purples and reds; a profusion of flourishing trades",
+        "sunlit and enchanting scene of spring; lovely spring sunshine",
+        "riot (or blaze) of colour; thousands of purples and reds; a profusion of flourishing trades",
         "Rain in spring is as precious as oil",
         "full of vitality",
         "spring colours filling the garden",
