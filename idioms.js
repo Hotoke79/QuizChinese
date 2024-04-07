@@ -126,19 +126,27 @@ const iterable = function () {
         "name": "Spring",
         "descriptio": [
           "sunlit and enchanting scene of spring; lovely spring sunshine",
-          "riot (or blaze) of colour",
+          "riot (or blaze) of colour; thousands of purples and reds; a profusion of flourishing trades",
+        "Rain in spring is as precious as oil",
+        "full of vitality",
+        "spring colours filling the garden",
+        "Spring is in the air"
+        "Birds sing and flowers give forth fragrance (as on a fine spring day); lit. birdsong and fragrant flowers (idiom); fig. the intoxication of a beautiful spring day",
+        "Spring has come and the flowers are in bloom",
+        "let a hundred flowers bloom—free development of different artistic forms and styles",
+        "gentle breeze and light rain—in a gentle and mild way"
         ],
         "reveal": [
         "春光明媚</br>chūn guāng míng mèi",
-        "万紫千红</br>wàn zǐ qiān hóng</br> 百花盛开，万紫千红",
+        "万紫千红</br>wàn zǐ qiān hóng</br> 百花盛开，万紫千红</br>Bǎihuā shèngkāi, wànzǐqiānhóng</br>Flowers of all sorts are blooming in a riot of colour.",
         "春雨如油</br>chūn yǔ rú yóu",
         "生机勃勃</br>shēng jī bó bó",
-        "春色满园</br>chūn sè mǎn yuán",
-        "春意盎然</br>chūn yì àng rán",
+        "春色满园</br>chūn sè mǎn yuán</br>春色满园关不住, 一枝红杏出墙来</br>chūnsèmǎnyuán guānbuzhù, yī zhī hóngxìngchūqiáng lái</br>Spring colours fill the garden but cannot all be contained. | For one spray of red apricot blossoms peeps out from the wall.",
+        "春意盎然</br>chūn yì àng rán</br>盎然</br>àng rán</>abundant",
         "鸟语花香</br>niǎo yǔ huā xiāng",
         "春暖花开</br>chūn nuǎn huā kāi",
         "百花齐放</br>bǎi huā qí fàng",
-        "和风细雨</br>hé fēng xì yǔ"
+        "和风细雨</br>hé fēng xì yǔ</br>和风细雨地开展批评和自我批评</br>héfēngxìyǔ de kāizhǎn pīpíng hé zìwǒ pīpíng</br>make criticism and self-criticism in the manner of 'a gentle breeze and a mild rain'"
       ]
       },
       {
