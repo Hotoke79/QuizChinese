@@ -3,156 +3,240 @@ const iterable = function () {
     [
       {
         "name": "Аналогии",
-        "descriptio": ["Дословно: хороший меч не стареет. А если по-русски то: старый конь борозды не испортит или тряхнуть стариной",
-          "Дословно: один камень - две птицы. По-нашему будет конечно же - одним выстрелом убить двух зайцев.",
-          "Дословно: утопить лодку и разбить котел. Т.е. сжечь мосты, исключить пути к отступлению.",
-          "Дословно: днем видеть сны. Русские аналоги: витать в облаках, строить замки из песка. Т.е. предаваться малосбыточным мечтам.",
-          "Дословно: любишь дом - люби и ворона (на крыше). любишь кататься - люби и санки возить.",
-          "Дословно: материала много, а пользы мало. Велика фигура, да дура по-русски.",
-          "Дословно: нарисовав дракона подрисовать зрачки. Иначе: последний штрих, вишенка на торте.",
-          "Дословно: камень утонул в море. По-нашему: кануть в воду, бесследно исчезнуть.",
-          "Дословно: слева, справа - становится трудно. Куда ни киннь - везде клин",
-          "Дословно: зуб менять на зуб. У нас - глаз за глаз",
-          "Дословно: Мутная вода, нащупывать рыбу. По-нашему: ловить рыбу в мутной воде",
-          "Дословно: На половину войти в землю. По-нашему: одной ногой в могиле, дышать на ладан.",
-          "Дословно: начало, конец - сног на голову. По-нашему: ставить телегу впереди лошади",
-          "Дословно: беда с неба падает. Как снег на голову",
-          "Голова тяжелая, а ноги леггие. По-нашему: колосс на глинянных ногах</b>. Говориться о чем то массивном, но не устойчивом.",
-          "Дословно: Плакать, смеяться не получается. По-нашему: смех сквозь слезы."
+        "descriptio": ["Дословно: хороший меч не стареет. А если по-русски то: старый конь борозды не испортит или тряхнуть стариной.<br>",
+          "Дословно: один камень - две птицы. По-нашему будет конечно же - одним выстрелом убить двух зайцев.<br>",
+          "Дословно: утопить лодку и разбить котел. Т.е. сжечь мосты, исключить пути к отступлению.<br>",
+          "Дословно: днем видеть сны. Русские аналоги: витать в облаках, строить замки из песка. Т.е. предаваться малосбыточным мечтам.<br>",
+          "Дословно: любишь дом - люби и ворона (на крыше). любишь кататься - люби и санки возить.<br>",
+          "Дословно: материала много, а пользы мало. Велика фигура, да дура по-русски.<br>",
+          "Дословно: нарисовав дракона подрисовать зрачки. Иначе: последний штрих, вишенка на торте.<br>",
+          "Дословно: камень утонул в море. По-нашему: кануть в воду, бесследно исчезнуть.<br>",
+          "Дословно: слева, справа - становится трудно. Куда ни киннь - везде клин<br>",
+          "Дословно: зуб менять на зуб. У нас - глаз за глаз<br>",
+          "Дословно: Мутная вода, нащупывать рыбу. По-нашему: ловить рыбу в мутной воде<br>",
+          "Дословно: На половину войти в землю. По-нашему: одной ногой в могиле, дышать на ладан.<br>",
+          "Дословно: начало, конец - сног на голову. По-нашему: ставить телегу впереди лошади<br>",
+          "Дословно: беда с неба падает. Как снег на голову<br>",
+          "Голова тяжелая, а ноги леггие. По-нашему: колосс на глинянных ногах<br>. Говорится о чем то массивном, но не устойчивом.<br>",
+          "Дословно: Плакать, смеяться не получается. По-нашему: смех сквозь слезы.<br>"
         ],
-
+  
         "reveal": [
-          "宝刀不老 </br> bǎo dāo bù lǎo",
-          "一石二鸟 </br> yī shí èr niǎo",
-          "沉舟破釜 </br> chén zhōu pò fǔ",
-          "白日做梦 </br> bái rì zuò mèng",
-          "爱屋及乌 </br> ài wū jí wū",
-          "大材小用 </br> dà cái xiǎo yòng",
-          "画龙点睛 </br> huà lóng diǎn jīng",
-          "石沉大海 </br> shí chén dà hǎi",
-          "左右为难 </br> zuǒ yòu wéi nán",
-          "以牙还牙 </br> yǐ yá huán yá",
-          "浑水摸鱼 </br> hún shuǐ mō yú",
-          "半截入土 </br> bàn jié rù tǔ",
-          "本末倒置 </br> běn mò dǎo zhì",
-          "祸从天降 </br> huò cóng tiān jiàng",
-          "头重脚轻 </br> tóu zhòng jiǎo qīng",
-          "哭笑不得 </br> kū xiào bù dé"]
-
+          "宝刀不老 <br> bǎo dāo bù lǎo",
+          "一石二鸟 <br> yī shí èr niǎo",
+          "沉舟破釜 <br> chén zhōu pò fǔ",
+          "白日做梦 <br> bái rì zuò mèng",
+          "爱屋及乌 <br> ài wū jí wū",
+          "大材小用 <br> dà cái xiǎo yòng",
+          "画龙点睛 <br> huà lóng diǎn jīng",
+          "石沉大海 <br> shí chén dà hǎi",
+          "左右为难 <br> zuǒ yòu wéi nán",
+          "以牙还牙 <br> yǐ yá huán yá",
+          "浑水摸鱼 <br> hún shuǐ mō yú",
+          "半截入土 <br> bàn jié rù tǔ",
+          "本末倒置 <br> běn mò dǎo zhì",
+          "祸从天降 <br> huò cóng tiān jiàng",
+          "头重脚轻 <br> tóu zhòng jiǎo qīng",
+          "哭笑不得 <br> kū xiào bù dé"]
+  
       },
       {
         "name": "Срочность, неотложность",
         "descriptio": [
-          "a hundred weight hanging by a hair—in imminent peril</br>在这****, 万分危急的时候, 援军到了</br>Zài zhè qiānjūnyīfà, wànfēn wēijí de shíhou, yuánjūn dàoliǎo.</br>In this moment of extreme crisis when everything was hanging by a single thread, the relief troops arrived.",
-          "brook no delay; demand immediate attention; be of great urgency</br>****的行动</br>action which brooks no delay",
-          "very impatient; unable to hold back; too impatient to wait; anxious to do sth</br>他们都****地想知道发生了什么事。</br>Tāmen dōu pòbùjídài de xiǎng zhīdao fāshēng le shénme shì.</br>They were impatient to know what had happened",
-          "most urgent; post-haste; express; Most Urgent [formerly on dispatches]</br>****的电报",
-          "The fire is singeing the eyebrows.—a desperate situation; at a crucial point</br>****的事儿</br>matter of the utmost urgency",
-          "as pressing as a fire singeing one's eyebrows—extremely urgent</br>母亲寄来两万块钱, 解了我****</br>Mǔqin jìlái liǎngwàn kuài qián, jiě le wǒ ránméizhījí.</br>Mother sent me 20,000 yuan addressing my pressing need."
+          "Висеть на волоске, момент неминуемой опасности<br>",
+          "Не терпеть отлагательств; требовать немедленного внимания; быть очень срочным<br>",
+          "Быть нетерпеливым; не в силах сдержаться; слишком нетерпелив, чтобы ждать; очень хотеть что-то сделать<br>",
+          "самый срочный; обычно в отношении почтовых или телеграфных отправлений<br>",
+          "Дословно: Огонь опаляет брови — отчаянное положение; в решающий момент<br>",
+          "Насущно, как огонь, опаляющий брови, чрезвычайно срочно<br>"
         ],
         "reveal": [
-          "千钧一发</br>qiān jūn yī fà</br>a matter of life or death",
-          "刻不容缓</br>kè bù róng huǎn",
-          "迫不及待</br>pò bù jí dài",
-          "十万火急</br>shí wàn huǒ jí",
-          "火烧眉毛</br>huǒ shāo méi máo",
-          "燃眉之急</br> rán méi zhī jí"
+          "千钧一发<br>qiān jūn yī fà<br>在这千钧一发, 万分危急的时候, 援军到了<br>Zài zhè qiānjūnyīfà, wànfēn wēijí de shíhou, yuánjūn dàoliǎo.<br>И в кризисный момент, когда все висело на волоске, прибыло подкрепление.",
+          "刻不容缓<br>kè bù róng huǎn<br>刻不容缓的行动<br>действие, не терпящее промедления.",
+          "迫不及待<br>pò bù jí dài<br>他们都迫不及待地想知道发生了什么事。<br>Tāmen dōu pòbùjídài de xiǎng zhīdao fāshēng le shénme shì.<br>Им не терпелось узнать, что-же произошло.",
+          "十万火急<br>shí wàn huǒ jí<br>十万火急的电报<br>Срочная телеграмма.",
+          "火烧眉毛<br>huǒ shāo méi máo<br>火烧眉毛的事儿<br>дело крайней срочности.",
+          "燃眉之急<br> rán méi zhī jí<br>母亲寄来两万块钱, 解了我燃眉之急<br>Mǔqin jìlái liǎngwàn kuài qián, jiě le wǒ ránméizhījí.<br>Мать прислала мне 20 000 юаней, решив мою насущную потребность."
         ]
       },
       {
         "name": "Насекомые",
         "descriptio": [
-          "a moth darting into a flame—bring destruction upon oneself; seek one's own doom</br>",
-          "slip out of a predicament like a cicada sloughing its skin—escape by cunning manoeuvring</br>",
-          "pluck the laurel branch from the Toad Palace—succeed in the highest imperial examinations</br>",
-          "nibble like a silkworm or swallow like a whale—seize another country's territory by piecemeal encroachment or wholesale annexation; annex and encroach upon (another country's territory)</br>",
-          "like a dragon fly skimming the surface of the water—just touch on sth. lightly without going into it deeply",
-          "a mantis trying to obstruct a chariot—overrate oneself and try to hold back an overwhelming force</br>",
-          "thread of a spider and trail of a horse—clues; traces",
-          "covet gains ahead without being aware of danger behind as the mantis stalk the cicade,unaware of the oriole behind"
+          "Как мотылек, летящий в пламя; навлечь на себя гибель; искать свою собственную погибель.<br>",
+          "Выскользнуть из затруднительного положения, как цикада, сбрасывающая кожу; спастись хитрым маневрированием.<br>",
+          "Красивые брови и белые зубы; милая юная девушка",
+          "Грызть как шелкопряд, или глотать как кит; захватывать территорию другой страны путем постепенного вторжения или массовой аннексии; аннексировать и посягнуть на (территорию другой страны)<br>",
+          "Словно стрекоза, скользящая над поверхностью воды; едва прикоснуться к чему-либо, не вдаваясь в детали<br>",
+          "Когда богомол пытается помешать колеснице — переоценить себя и попытаться сдержать превосходящую силу<br>",
+          "Нить паука и след лошади – подсказки; следы<br>",
+          "Жажда продвижения вперед, не замечая опасности сзади; как богомол преследует цикадку, не подозревая об иволге позади<br>"
         ],
         "reveal": [
-          "飞蛾扑火</br>fēi é pū huǒ",
-          "金蝉脱壳</br>jīn chán tuō qiào",
-          "蟾宫折桂</br>chán gōng zhé guì",
-          "蚕食鲸吞</br>cán shí jīng tūn",
-          "蜻蜓点水</br>qīng tíng diǎn shuǐ</br>做调查工作不能蜻蜓点水, 要深入实际</br>Zuò diàochá gōngzuò bù néng qīngtíngdiǎnshuǐ, yào shēnrù shíjì.</br>To make an investigation, one should go into matters deeply, not just scratch the surface.",
-          "螳臂挡车</br>táng bì dǎng chē",
-          "蛛丝马迹</br>zhū sī mǎ jì</br>此案有蛛丝马迹可寻。</br>There are clues in the case.",
-          "螳螂捕蝉，黄雀在后</br>táng láng bǔ chán，huáng què zài hòu"
+          "飞蛾扑火<br>fēi é pū huǒ",
+          "金蝉脱壳<br>jīn chán tuō qiào",
+          "蛾眉皓齒<br>é méi hào chǐ",
+          "蚕食鲸吞<br>cán shí jīng tūn",
+          "蜻蜓点水<br>qīng tíng diǎn shuǐ<br>做调查工作不能蜻蜓点水, 要深入实际<br>Zuò diàochá gōngzuò bù néng qīngtíngdiǎnshuǐ, yào shēnrù shíjì.<br>Чтобы провести расследование, нужно глубоко вникать в суть дела, а не скользить по поверхности.",
+          "螳臂挡车<br>táng bì dǎng chē",
+          "蛛丝马迹<br>zhū sī mǎ jì<br>此案有蛛丝马迹可寻。<br>В деле есть улики.",
+          "螳螂捕蝉，黄雀在后<br>táng láng bǔ chán, huáng què zài hòu"
         ]
       },
       {
         "name": "Животные",
         "descriptio": [
-          "all things take on a new aspect; everything looks new and fresh</br>(in the spring) nature takes on a new look (idiom)</br>",
-          "cover the head and sneak away like a rat—scurry (or scamper) off like a frightened rat</br>",
-          "crowing like a cock and stealing like a dog (idiom)</br>",
-          "magnificent army with thousands of men and horses (idiom); impressive display of manpower</br>all the King's horses and all the King's men</br>",
-          "To mend the pen after sheep are lost (idiom)</br>",
-          "To see a bow reflected in a cup as a snake (idiom); fig. unnecessary suspicions</br>overly fearful",
-          "A crane in a flock of chicken (idiom); way above the common</br>manifestly superior",
-          "play the lute to a cow—address the wrong audience; talk over sb.'s head</br>to cast pearls before swine</br>",
-          "like a stranded fish put back into water [said of one in his proper surroundings or having got a great aid]",
-          "lit. birdsong and fragrant flowers (idiom); fig. the intoxication of a beautiful spring day",
-          "hold a candle to the devil </br>play the jackal to the tiger—help a rascal commit villainy</br>(idiom) to act as accomplice to the tiger; to help a villain do evil",
-          "The (proverbial) Guizhou donkey has exhausted its tricks.—at one's wit's end; at the end of one's rope",
-          "A mouse can see only an inch.—see only what is under one's nose; be short-sighted",
-          "have a back like a tiger's and a waist like a bear's—tough and stocky",
-          "stand by a stump waiting for hares bump into it—trust to luck; wait for a windfall",
-          "white hair and ruddy complexion—healthy in old age; hale and hearty"
-
+          "Все вещи принимают новый вид; все выглядит новым и свежим<br>(весной) природа приобретает новый вид<br>",
+          "Прикрыть голову и ускользнуть, как крыса – удрать (или убежать), как испуганная крыса<br>",
+          "Кукарекать как петух и воровать как собака <br>",
+          "Великолепная армия с тысячами людей и лошадей; впечатляющая демонстрация живой силы<br>Вся королевская конница и вся королевская рать<br>",
+          "Починить загон после потери овцы <br>",
+          "Видеть лук, отраженный в чашке в виде змеи; излишние подозрения<br>чрезмерный страх<br>",
+          "Играть на лютне корове; обратиться не к той аудитории<br>метать бисер перед свиньями<br>",
+          "Как выброшенная на мель рыба, попавшая обратно в воду (говорится о человеке, находящемся в надлежащем окружении или получившем большую помощь)<br>",
+          "Дословно пение птиц и ароматные цветы; фигурально - опьянение прекрасного весеннего дня<br>",
+          "Держать свечу дьяволу <br>Шакалить перед тигром — помочь негодяю совершить злодеяние<br>Выступать в роли сообщника тигра; помочь злодею совершить зло<br>",
+          "Осел из Гуанчжоу исчерпал свои возможности; находиться в тупике<br>",
+          "Мышь видит только на дюйм; видеть только то, что под носом - быть недальновидным<br>",
+          "Иметь спину как у тигра, и поясницу как у медведя; сбитый и коренастый<br>",
+          "Стоять у пня и ждать, пока на него налетит заяц; надеяться на удачу - ждать с моря погоды<br>"
         ],
         "reveal": [
-          "万象更新</br>wàn xiàng gēng xīn",
-          "抱头鼠窜</br>bào tóu shǔ cuàn",
-          "鸡鸣狗盗</br>jī míng gǒu dào</br>鸡鸣狗盗之徒</br>mean people who resort to petty tricks",
-          "千军万马</br>qiān jūn wàn mǎ",
-          "亡羊补牢</br>wáng yáng bǔ láo</br>亡羊补牢, 犹未为晚</br>Wángyángbǔláo, yóu wèi wéi wǎn</br>It is not too late to mend the fold even after the sheep is lost. or It’s never too late to try.",
-          "杯弓蛇影</br>bēi gōng shé yǐng",
-          "鹤立鸡群</br>hè lì jī qún",
-          "对牛弹琴</br>duì niú tán qín",
-          "如鱼得水</br>rú yú dé shuǐ",
-          "鸟语花香</br>niǎo yǔ huā xiāng",
-          "为虎作伥 </br>wèi hǔ zuò chāng</>伥</br>ghost of a man who fell victim to a tiger, yet helps the tiger to devour others",
-          "黔驴技穷</br>qián lǘ jì qióng",
-          "鼠目寸光</br>shǔ mù cùn guāng",
-          "虎背熊腰</br>hǔ bèi xióng yāo",
-          "守株待兔</br>shǒu zhū dài tù",
-          "鹤发童颜</br>hè fà tóng yán"
+          "万象更新<br>wàn xiàng gēng xīn",
+          "抱头鼠窜<br>bào tóu shǔ cuàn",
+          "鸡鸣狗盗<br>jī míng gǒu dào<br>鸡鸣狗盗之徒<br>Злые люди, которые прибегают к мелким уловкам",
+          "千军万马<br>qiān jūn wàn mǎ",
+          "亡羊补牢<br>wáng yáng bǔ láo<br>亡羊补牢, 犹未为晚<br>Wángyángbǔláo, yóu wèi wéi wǎn<br>Еще не поздно исправить ситуацию даже после того, как овца потерялась. Никогда не поздно попробовать.",
+          "杯弓蛇影<br>bēi gōng shé yǐng",
+          "对牛弹琴<br>duì niú tán qín",
+          "如鱼得水<br>rú yú dé shuǐ",
+          "鸟语花香<br>niǎo yǔ huā xiāng",
+          "为虎作伥 <br>wèi hǔ zuò chāng<br>(伥-chāng<br>призрак человека, ставшего жертвой тигра, но помогающего тигру пожирать других)",
+          "黔驴技穷<br>qián lǘ jì qióng",
+          "鼠目寸光<br>shǔ mù cùn guāng",
+          "虎背熊腰<br>hǔ bèi xióng yāo",
+          "守株待兔<br>shǒu zhū dài tù"
         ]
       },
       {
-        "name": "Spring",
+        "name": "Весна",
         "descriptio": [
-        "sunlit and enchanting scene of spring; lovely spring sunshine",
-        "riot (or blaze) of colour; thousands of purples and reds; a profusion of flourishing trades",
-        "Rain in spring is as precious as oil",
-        "full of vitality",
-        "spring colours filling the garden",
-        "Spring is in the air",
-        "Birds sing and flowers give forth fragrance (as on a fine spring day); lit. birdsong and fragrant flowers (idiom); fig. the intoxication of a beautiful spring day",
-        "Spring has come and the flowers are in bloom",
-        "let a hundred flowers bloom—free development of different artistic forms and styles",
-        "gentle breeze and light rain—in a gentle and mild way"
+          "залитая солнцем и очаровательная сцена весны; чудесное весеннее солнышко<br>",
+          "буйство (или пламя) красок; тысячи пурпурных и красных; изобилие процветающих профессий<br>",
+          "весенний дождь так же ценен, как масло<br>",
+          "полный жизненной энергии<br>",
+          "весенние краски наполняют сад<br>",
+          "воздух наполнен весной<br>",
+          "поют птицы и благоухают цветы (как в погожий весенний день); буквально. пение птиц и ароматные цветы (идиома); образно. опьянение прекрасного весеннего дня<br>",
+          "пришла весна и расцвели цветы<br>",
+          "пусть расцветают сто цветов — свободное развитие различных художественных форм и стилей.<br>",
+          "легкий ветерок и небольшой дождь — нежно и мягко<br>"
         ],
         "reveal": [
-        "春光明媚</br>chūn guāng míng mèi",
-        "万紫千红</br>wàn zǐ qiān hóng</br> 百花盛开，万紫千红</br>Bǎihuā shèngkāi, wànzǐqiānhóng</br>Flowers of all sorts are blooming in a riot of colour.",
-        "春雨如油</br>chūn yǔ rú yóu",
-        "生机勃勃</br>shēng jī bó bó",
-        "春色满园</br>chūn sè mǎn yuán</br>春色满园关不住, 一枝红杏出墙来</br>chūnsèmǎnyuán guānbuzhù, yī zhī hóngxìngchūqiáng lái</br>Spring colours fill the garden but cannot all be contained. | For one spray of red apricot blossoms peeps out from the wall.",
-        "春意盎然</br>chūn yì àng rán</br>盎然</br>àng rán</>abundant",
-        "鸟语花香</br>niǎo yǔ huā xiāng",
-        "春暖花开</br>chūn nuǎn huā kāi",
-        "百花齐放</br>bǎi huā qí fàng",
-        "和风细雨</br>hé fēng xì yǔ</br>和风细雨地开展批评和自我批评</br>héfēngxìyǔ de kāizhǎn pīpíng hé zìwǒ pīpíng</br>make criticism and self-criticism in the manner of 'a gentle breeze and a mild rain'"
-      ]
+          "春光明媚<br>chūn guāng míng mèi",
+          "万紫千红<br>wàn zǐ qiān hóng",
+          "春雨如油<br>chūn yǔ rú yóu",
+          "生机勃勃<br>shēng jī bó bó",
+          "春色满园<br>chūn sè mǎn yuán<br> 春色满园关不住, 一枝红杏出墙来<br>chūnsèmǎnyuán guānbuzhù, yī zhī hóngxìngchūqiáng lái<br>Весенние краски наполняют сад, но их невозможно сдержать. Из-за стены выглядывает ветка, увешеная красными абрикосовыми цветами.",
+          "春意盎然<br>chūn yì àng rán",
+          "鸟语花香<br>niǎo yǔ huā xiāng",
+          "春暖花开<br>chūn nuǎn huā kāi",
+          "百花齐放<br>bǎi huā qí fàng",
+          "和风细雨<br>hé fēng xì yǔ<br>和风细雨地开展批评和自我批评<br>héfēngxìyǔ de kāizhǎn pīpíng hé zìwǒ pīpíng<br>критика и самокритика должны быть как легкий ветер и слабый дождь"
+        ]
       },
       {
-        "name": "TEST",
-        "descriptio": ["all things take on"],
-        "reveal": ["抱头鼠窜</br>bào tóu shǔ cuàn",]
+        "name": "Дракон",
+        "descriptio": [
+          "Нескончаемый поток лошадей и экипажей; интенсивное движение<br>",
+          "Отважный как дракон и живучий как тигр<br>",
+          "Дословно: войны драконов, битвы тигров; жестокая битва между гигантами<br>",
+          "Дух лошади-дракона; старый, но еще полный жизни<br>",
+          "Живой и энергичный в каллиграфии<br>",
+          "Поднимающиеся драконы и прыгающие тигры (сцена бурной деятельности)<br>",
+          "Место, такое как пруд дракона и логово тигра — опасное место<br>",
+          "Ходить, как дракон, и шагать, как тигр; могучая и внушающая трепет осанка<br>"
+        ],
+        "reveal": [
+          "车水马龙<br>chē shuǐ mǎ lóng<br>越南河内的夜晚，街道人流拥挤、车水马龙<br>yuènán hénèi de yèwǎn ， jiēdào rénliú yōngjǐ 、 chēshuǐmǎlóng<br>Улицы Ханоя были заполнены вечерним транспортом и пешеходами.",
+          "生龙活虎<br>shēng lóng huó hǔ<br>这种自由能让你生龙活虎<br>zhè zhǒng zìyóu néng ràng nǐ shēnglónghuóhǔ<br>Эта свобода оживит тебя.",
+          "龙争虎斗<br>lóng zhēng hǔ dòu<br>他们会在《龙争虎斗IV》中砍杀人头、断人脊骨<br>tāmén huì zài 《 lóngzhēnghǔdǒu IV》 zhōng kǎnshā réntóu 、 duàn rén jǐgǔ<br>В Mortal Kombat IV они отрубают головы и ломают позвоночники.",
+          "龙马精神<br>lóng mǎ jīng shén<br>祝好运、健康、龙马精神伴你度过一个快乐新年<br>zhù hǎoyùn 、 jiànkāng 、 lóngmǎjīngshén bàn nǐ dùguò yīgè kuàilè xīnnián<br>Удачи, здоровья, хорошего настроения. Я желаю вам счастливого Нового года",
+          "龙飞凤舞<br>lóng fēi fèng wǔ<br>所以，他一边龙飞凤舞一边说，我在军团的职责是什么呢<br>suǒyǐ ， tā yībiān lóngfēifèngwǔ yībiān shuō ， wǒ zài jūntuán de zhízé shì shénme ne<br>Итак, сказал он, быстро рисуя (иероглифы), каковы будут мои обязанности в легионе?",
+          "龙腾虎跃<br>lóng téng hǔ yuè<br>同时，祝愿IT精英们在各自的领域里龙腾虎跃<br>tóngshí ， zhù yuàn IT jīngyīngmén zài gèzì de lǐngyù lǐ lóngténghǔyuè<br>Между тем, мы желаем ИТ-элитам процветания в своих областях.",
+          "龙潭虎穴<br>lóng tán hǔ xué<br>潭 tán - глубокий бассейн, пруд",
+          "龙骧虎步<br>lóng xiāng hǔ bù<br>骧 xiāng - резво бегать, подниматься, высоко держаться"
+        ]
+      },
+      {
+        "name": "Птицы",
+        "descriptio": [
+          "Седые волосы и румяный цвет лица - здоровье в старости<br>",
+          "Как журавль среди кур; намного выше обычного<br>явно превосходить<br>",
+          "Взволнованно аплодировать; ликующий<br>",
+          "Ворона и павлин не издают ни звука; абсолютная тишина; ни одного голоса не слышно<br>",
+          "Легендарная птица Рух пролетает десять тысяч миль; блестящие перспективы на будущее<br>",
+          "Вздох ветра и зов журавля; иносказательно - впадать в панику при малейшем движении; нервничать<br>",
+          "Куриная кожа и седые волосы; быть в преклонном возрасте<br>"
+        ],
+        "reveal": [
+          "鹤发童颜<br>hè fà tóng yán<br>我爷爷是位鹤发童颜的矍铄老人<br>wǒ yéyé shì wèi hèfātóngyán de juéshuò lǎorén<br> Мой дед здоровый и крепкий бодряк",
+          "鹤立鸡群<br>hè lì jī qún<br>丹麦人所受的教育是在人群中不要显得鹤立鸡群<br>dānmàirén suǒshòude jiàoyù shì zài rénqúnzhōng bùyào xiǎndé hèlìjīqún<br> Датчан учат, что не нужно слишком выделятся из толпы",
+          "欢呼雀跃<br>huān hū què yuè<br>一小时以后，营救船又在雾中出现，村民们欢呼雀跃地跑去迎接<br> yī xiǎoshí yǐhòu ， yíngjiùchuán yòu zài wù zhōng chūxiàn ， cūnmínmén huānhūquèyuè dì pǎoqù yíngjiē<br>Час спустя спасательная лодка снова появилась в тумане, и ликующие жители деревни побежали ее приветствовать.",
+          "鸦雀无声<br>yā què wú shēng<br>突然一切都变得鸦雀无声<br>tūrán yīqiēdoū biàndé yāquèwúshēng<br>Внезапно все стихло",
+          "鹏程万里<br>péng chéng wàn lǐ<br>祝你新年快乐，鹏程万里！<br>zhù nǐ xīnnián kuàilè ， péngchéngwànlǐ<br>Желаю вам счастливого Нового года и многообещающего будущего!",
+          "风声鹤唳<br>fēng shēng hè lì<br>犯了罪的人总是感到风声鹤唳<br>fàn le zuì de rén zǒngshì gǎndào fēngshēnghèlì<br>Виновный человек чует опасность в каждом звуке.",
+          "鸡皮鹤发<br>jī pí hè fā<br>现代科技使每个人延长生命，但活愈老，长得愈老，鸡皮鹤发不是别人观感问题，而是妳的自我认同问题<br>xiàndài kējì shǐ měigèrén yáncháng shēngmìng ， dàn huó yù lǎo ， cháng dé yù lǎo ， jīpíhèfā bùshì biérén guāngǎn wèntí ， érshì tade zìwǒ rèntóng wèntí<br>Современная наука и технология позволяют каждому прожить долгую жизнь, но мы все равно стареем. Иметь куриную кожу и седые волосы – это проблема не только в том как вас воспринимают другие, но и вашей самооценке"
+        ]
+      },
+      {
+        "name": "Ненависть",
+        "descriptio": [
+          "очень разозлиться<br>",
+          "дословно - волосы встают дыбом на голове от гнева, так что слетает шляпа; кипеть от гнева<br>",
+          "внезапно разозлиться<br>",
+          "шипеть от злости, быть в ярости<br>",
+          "скрежетать зубами; проявление крайнего гнева; шипеть от ярости сквозь стиснутые зубы<br>",
+          "горько ненавидеть; непримиримая ненависть; ненавидеть; анафема<br>",
+          "ненавидеть зло, как ненавидишь врага<br>",
+          "ненавидеть кого-либо до мозга костей"
+        ],
+        "reveal": [
+          "火冒三丈<br>huǒ mào sān zhàng<br>他的评论把她气得火冒三丈<br>tāde pínglùn bǎ tā qìdé huǒmàosānzhàng<br>Она кипела от ярости от его замечаний<br>他顽固不化把我气得火冒三丈<br>tā wángùbùhuà bǎwǒ qìdé huǒmàosānzhàng<br>Его упрямство сводит меня с ума!<br>",
+          "怒发冲冠<br>nù fā chōng guān<br>",
+          "勃然大怒<br>bó rán dà nù",
+          "怒气冲冲<br>nù qì chōngchōng<br>他拒绝接受选举结果，起身怒气冲冲地离开了会场<br>tā jùjué jiēshòu xuǎnjǔ jiéguǒ ， qǐshēn nùqìchōngchōng de líkāi le huìcháng<br>Отказавшись принять решение голосования, он встал и вылетел (в ярости) с собрания.",
+          "咬牙切齿<br>yǎo yá qiē chǐ<br>我咬牙切齿愤怒已极<br>wǒ yǎoyáqiēchǐ fènnù yǐjí<br>От ярости я скрежетал зубами",
+          "深恶痛绝<br>shēn è tòng jué<br>我对种族偏见深恶痛绝<br>wǒ duì zhǒngzúpiānjiàn shēnètòngjué<br>Расовые предрассудки для меня — анафема.",
+          "疾恶如仇<br>jí è rú chóu",
+          "恨之入骨<br>hèn zhī rù gǔ<br>在恨之入骨的冲动下，他把仇人杀了<br>zài hènzhīrùgǔ de chōngdòng xià ， tā bǎ chóurén shā le<br>В неистовствой ненависти он убил своего врага."
+        ]
+      },
+      {
+        "name": "Мудрость, интеллект",
+        "descriptio": [
+          "быть эрудированным и хорошо информированным; иметь обширные знания о вещах как древних, так и современных<br>",
+          "предсказывать как пророк; предвидеть с божественной точностью<br>",
+          "мудрый и находчивый; хитрить<br>",
+          "получить глубокое понимание чего-либо; достичь мастерства посредством всестороннего изучения предмета<br>",
+          "хорошо разбираться в китайской и западной культурах, иметь глубокие знания как западной, так и традиционной китайской медицины<br>",
+          "быть полным ума; полон таланта<br>",
+          "выдающийся; стоять над толпой<br>",
+          "обширный и глубокий<br>",
+          "извлекать выгоду из взаимного обсуждения; опираясь на коллективный разум впитывать все полезные идеи<br>",
+          "делать выводы о других явлениях из одного случая; сделать вывод о других вещах из одного факта<br>"
+        ],
+        "reveal": [
+          "博古通今<br>bó gǔ tōng jīn<br>博古通今的专家<br>bógǔtōngjīn de zhuānjiā<br>эрудированный и информированный специалист",
+          "料事如神<br>liào shì rú shén<br>我又不能料事如神，总不免要吃点小亏<br>wǒ yòu bùnéng liàoshìrúshén zǒng bùmiǎn yào chīdiǎn xiǎokuī<br>Я не обладаю божественным провидением, поэтому мне не избежать небольших потерь",
+          "足智多谋<br>zú zhì duō móu<br>这些妇女坚强勇敢，足智多谋<br>zhèxiē fùnǚ jiānqiáng yǒnggǎn zúzhìduōmóu<br>Эти женщины были сильными, смелыми и находчивыми",
+          "融会贯通<br>róng huì guàn tōng<br>一个好的建筑师往往融会贯通，富有创造性<br>yīgè hǎode jiànzhùshī wǎngwǎng rónghuìguàntōng fùyǒu chuàngzàoxìng<br>Хороший архитектор всегда достигает мастерства посредством всестороннего изучения предмета и творческого подхода",
+          "学贯中西<br>xué guàn zhōng xī<br>他学贯中西，博古通今，在诗歌、学术研究以及翻译三个领域成就斐然<br>tā xuéguànzhōngxī bógǔtōngjīn zài shīgē xuéshù yánjiū yǐjí fānyì sāngè lǐngyù chéngjiù fěirán<br>Расширив свои знания и охватив как Запад, так и Восток, а также древние и современные знания, он добился блестящих успехов в области поэзии, академических исследований и перевода",
+          "才华横溢<br>cái huá héng yì<br>他是一个才华横溢的科学家<br>tā shì yīgè cáihuáhéngyì de kēxuéjiā<br>Он блестящий учёный",
+          "出类拔萃<br>chū lèi bá cuì<br>与大多数的同代作家相比，狄更斯更为出类拔萃<br>yù dàduōshù de tóngdài zuòjiā xiāngbǐ dígēngsī gèngwéi chūlèibácuì<br>В сравнении с большинством его современников Диккенс относился совсем к другому уровню писателей",
+          "博大精深<br>bó dà jīng shēn<br>中华传统文化博大精深<br>zhōnghuá chuántǒng wénhuà bódàjīngshēn<br>Традиционная китайская культура обширна и глубока",
+          "集思广益<br>jí sī guǎng yì<br>只有走群众路线，集思广益，才能把工作做好<br>zhǐyǒu zǒu qúnzhònglùxiàn jísīguǎngyì cáinéng bǎ gōngzuò zuòhǎo<br>Только следуя линии масс и прислушиваясь ко всем полезным мнениям, мы сможем добиться успеха.",
+          "举一反三<br>jǔ yī fǎn sān<br>在学习上要学会举一反三，触类旁通<br>zài xuéxí shang yào xuéhuì jǔyīfǎnsān chùlèipángtōng<br>Старайтесь учиться по аналогии и судить о целом по частям."
+        ]
       }
     ]
   )

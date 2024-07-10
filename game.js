@@ -1,186 +1,5 @@
-const containerGame = document.querySelector('.containerGame')
-
-const aboutGame = document.createElement('div')
-aboutGame.innerHTML = guidance
-aboutGame.setAttribute("id", "about_game")
-aboutGame.style.display = 'none'
-
-const about = document.createElement('div')
-about.setAttribute("class", "titleAbout")
-about.innerHTML = ''
-
-const desc_cont = document.createElement('div')
-desc_cont.setAttribute("id", "desript-container")
-const descr = document.createElement('div')
-descr.setAttribute("id", "descr")
-const reveal = document.createElement('div')
-reveal.setAttribute("id", "reveal")
-desc_cont.append(descr, reveal)
-
-const rWr = document.createElement('div')
-rWr.setAttribute("class", "rightWrong")
-
-const notGsd = document.createElement('div')
-notGsd.setAttribute("id", "notGuessed")
-notGsd.innerHTML = "Wrong"
-const spanW = document.createElement('span')
-spanW.setAttribute("id", "scoreWrong")
-spanW.innerHTML = 0
-
-notGsd.appendChild(spanW)
-rWr.appendChild(notGsd)
-
-const prg_out = document.createElement('div')
-prg_out.setAttribute("id", "progress-outer")
-const bar = document.createElement('div')
-bar.setAttribute("id", "bar")
-const prgrss = document.createElement('div')
-prgrss.setAttribute("id", "progress")
-const perc = document.createElement('div')
-perc.setAttribute("id", "perc")
-prgrss.appendChild(bar)
-prg_out.append(perc, prgrss)
-rWr.appendChild(prg_out)
-
-const gsd = document.createElement('div')
-gsd.setAttribute("id", "guessed")
-gsd.innerHTML = "Right"
-const spanR = document.createElement('span')
-spanR.setAttribute("id", "scoreRight")
-spanR.innerHTML = 0
-gsd.appendChild(spanR)
-rWr.appendChild(gsd)
-
-const rightWrong2 = document.createElement('div')
-rightWrong2.setAttribute("id", "rightWrong2")
-
-const wrng = document.createElement('div')
-wrng.setAttribute("id", "wrong")
-const rgt = document.createElement('div')
-rgt.setAttribute("id", "right")
-rightWrong2.appendChild(wrng)
-rightWrong2.appendChild(rgt)
-
-const downLoad = document.getElementById('downLoad')
-
-const wsl = document.createElement('div')
-wsl.setAttribute("id", "wordSpotLight")
-const kbd = document.createElement('div')
-kbd.setAttribute("id", "keyboard")
-containerGame.append(about, desc_cont, rWr, rightWrong2, wsl, kbd)
-containerGame.style.display = 'none'
-
-const mailForm = document.createElement('div')
-mailForm.setAttribute("id", "mail_form")
-const h1 = document.createElement('h1')
-h1.innerText = "Send a feedback"
-
-const contact_wrap = document.createElement('div')
-contact_wrap.setAttribute("id", "contact_wrap")
-
-const notify = document.createElement('div')
-notify.setAttribute("id", "notify")
-
-
-const contactForm = document.createElement('form')
-contactForm.setAttribute("id", "contact-form")
-
-const inputHidden = document.createElement('input')
-inputHidden.setAttribute("type", "hidden")
-inputHidden.setAttribute("name", "contact_number")
-
-const lableName = document.createElement('label')
-lableName.innerText = "Name"
-lableName.style.textAlign = "center"
-
-const inputName = document.createElement('input')
-inputName.setAttribute("id", "name_inp")
-inputName.setAttribute("name", "nme")
-inputName.setAttribute("placeholder", "Ваше имя (не обязательно)")
-
-const lableEmail = document.createElement('label')
-lableEmail.innerText = "E-mail"
-lableEmail.style.textAlign = "center"
-
-const inputMail = document.createElement('input')
-inputMail.setAttribute("id", "em_inp")
-inputMail.setAttribute("placeholder", "Е-mail для обратной связи")
-inputMail.setAttribute("type", "email")
-inputMail.setAttribute("name", "eml")
-inputMail.setAttribute("required", "true")
-
-const lableMessage = document.createElement('label')
-lableMessage.innerText = "Message"
-lableMessage.style.textAlign = "center"
-
-const textArea = document.createElement('textarea')
-textArea.setAttribute("placeholder", "Текст сообщения")
-textArea.setAttribute("id", "text_inp")
-textArea.setAttribute("name", "mssge")
-textArea.setAttribute("required", "true")
-textArea.setAttribute("cols", "24")
-textArea.setAttribute("rows", "10")
-
-const submitButton = document.createElement('input')
-submitButton.setAttribute("id", "formSendBtn")
-submitButton.setAttribute("type", "submit")
-submitButton.setAttribute("value", "Send")
-
-contactForm.append(inputHidden, lableName, inputName, lableEmail, inputMail, lableMessage, textArea, submitButton)
-
-contact_wrap.append(notify, contactForm)
-
-mailForm.append(h1, contact_wrap)
-mailForm.style.display = "none"
-
-const canvasContainer = document.createElement('div')
-canvasContainer.setAttribute('id', 'canvasContainer')
-
-const canvas = document.createElement('canvas')
-canvas.setAttribute('id', 'canvas')
-
-const overlay = document.createElement('div')
-overlay.setAttribute('id', 'overlay')
-overlay.innerHTML = "To enter menu klick the burger icon at the left upper corner or swipe right"
-
-canvasContainer.append(overlay, canvas)
-
-document.body.append(canvasContainer, aboutGame, mailForm)
-
-var ctx = canvas.getContext('2d');
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-var texts = '成语师傅'.split('');
-
-var fontSize = 56;
-var columns = canvas.width / fontSize;
-var drops = [];
-for (var x = 0; x < columns; x++) {
-  drops[x] = 1;
-}
-
-function draw() {
-  ctx.fillStyle = '#8e9eab';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'rgb(220, 252, 220)';
-  ctx.font = fontSize + 'px arial';
-  for (var i = 0; i < drops.length; i++) {
-    var text = texts[Math.floor(Math.random() * texts.length)];
-    ctx.fillText(text, i * fontSize, drops[i / 2] * fontSize);
-
-    if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
-      drops[i] = 0;
-    }
-    drops[i]++;
-  }
-}
-
-setInterval(draw, 330);
-
 let answer = ''
-const maxWrong = 4
+const maxWrong = 3
 let mistakes = 0
 let clicked = []
 let wordStatus
@@ -190,22 +9,8 @@ let wrong = []
 let current = 0
 let sw = 0
 let sr = 0
-
-const menu = document.getElementById('menu');
-
-const openEmail = () => {
-  aboutGame.style.display = 'none'
-  containerGame.style.display = 'none'
-  mailForm.style.display = "flex"
-  canvasContainer.style.display = "none"
-}
-
-function aboutReveal() {
-  aboutGame.style.display = 'flex'
-  containerGame.style.display = 'none'
-  mailForm.style.display = "none"
-  canvasContainer.style.display = "none"
-}
+let itr
+let lvl
 
 function shuffle(obj1, obj2) {
   var index = obj1.length
@@ -232,22 +37,52 @@ const extract = (origArr) => {
   return newArr
 }
 
-function period(e, elName) {
+function period(e, elName, sec, lvl, l, t) {
 
+  if (l) {
+    mainMenu.style.display = "none"
+    containerGame.style.display = "none"
+    wrap.style.display = "flex"
+    stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+    cat.innerText = elName
+
+    nxt.onclick = () => {
+      if (current >= e['reveal'].length - 1) {
+        current = 0
+        stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+      } else
+        current++
+      stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+    }
+    prev.onclick = () => {
+      if (current <= 0) {
+        current = e['reveal'].length - 1
+        stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+      } else
+        current--
+      stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+    }
+
+  } else if (t) {
+    counter = null
+  }
+  else
+    startTimer(sec)
   about.innerHTML = elName
+  !t ? level.innerHTML = `Тест ${lvl}` : level.innerHTML = ``
 
   var totalIdioms = extract(e['reveal']).length
   var fraction = 1 / totalIdioms * 100;
   var percents = Math.round(current * fraction) + "%"
 
   descr.innerHTML = e['descriptio'][current]
-  reveal.innerHTML = e['reveal'][current]
+  t ? reveal.innerHTML = 'В режиме "Без таймера" подсказки отключены' : reveal.innerHTML = e['reveal'][current]
+
   function generateAnswer() {
     answer = extract(e['reveal'])[current]
-    console.log(answer)
   }
   function reloadButt() {
-    var btnReload = `<h3 style="color: green;">Right: ${sw}</h3>__<h3 style="color: red;">Wrong: ${sr}</h3>`;
+    var btnReload = `<h3 style="color: green;">Ваш результат</h3>`;
     descr.innerHTML = btnReload;
   }
 
@@ -268,7 +103,6 @@ function period(e, elName) {
     }
 
     incChunk()
-
     function equalizer(arr) {
       let lst = new Set()
       for (i = 0; i < arr.length; i++) {
@@ -301,41 +135,64 @@ function period(e, elName) {
   function checkIfGameWon() {
     if (wordStatus === answer) {
       spanR.innerHTML = ++sr;
-      right.push(answer);
+      right.unshift(answer);
       rgt.innerHTML = `${right.join('<br>')}`
       ++current;
       percents = Math.round(current * fraction) + "%"
       bar.style.height = percents
       perc.innerHTML = percents
+      if (current === totalIdioms) {
+        clearAll();
+        reloadButt();
+        return clearInterval(counter)
+      }
+      clearInterval(counter)
+      setTimeout(function () {
+        next();
+        if (!t) {
+          startTimer(sec)
+        }
+      }, 1000);
+    }
+  }
+
+  function lost() {
+    spanW.innerHTML = ++sw;
+    wrong.unshift(answer);
+    wrng.innerHTML = `${wrong.join('<br>')} `
+    ++current;
+    percents = Math.round(current * fraction) + "%"
+    bar.style.height = percents
+    perc.innerHTML = percents
+  }
+
+  function checkIfGameLost() {
+    if (mistakes === maxWrong) {
+      lost()
+      clearInterval(counter)
+      if (!t) {
+        startTimer(sec)
+      }
       setTimeout(function () {
         next();
       }, 1000);
     }
   }
 
-  function checkIfGameLost() {
-    if (mistakes === maxWrong) {
-      spanW.innerHTML = ++sw;
-      wrong.push(answer);
-      wrng.innerHTML = `${wrong.join('<br>')} `
-      ++current;
-      percents = Math.round(current * fraction) + "%"
-      bar.style.height = percents
-      perc.innerHTML = percents
-      setTimeout(function () {
-        next();
-      }, 1000);
-    }
-  }
+
   function clearAll() {
-    kbd.innerHTML = "";
-    descr.innerHTML = "";
+    mistakes = 0
+    clicked = []
+    wsl.innerHTML = ""
+    reveal.innerHTML = ""
+    kbd.innerHTML = ""
+    descr.innerHTML = ""
     rgt.style.display = 'flex'
     wrng.style.display = 'flex'
-    rightWrong2.style.display = 'flex';
-    rightWrong2.style.justifyContent = 'space-between';
-    rightWrong2.style.height = '5vh';
-    rightWrong2.style.width = '95%';
+    rightWrong2.style.display = 'flex'
+    rightWrong2.style.justifyContent = 'space-between'
+    rightWrong2.style.height = '5vh'
+    rightWrong2.style.width = '95%'
   }
   function guessedWord() {
     wordStatus = answer.split('').map(L => (clicked.indexOf(L) >= 0 ? L : " * ")).join('');
@@ -348,7 +205,7 @@ function period(e, elName) {
       clicked = [];
       wsl.innerHTML = "* * * *"
       descr.innerHTML = e['descriptio'][current];
-      reveal.innerHTML = e['reveal'][current];
+      t ? reveal.innerHTML = 'В режиме "Без таймера" подсказки отключены' : reveal.innerHTML = e['reveal'][current]
       generateAnswer();
       generateButtons();
     } else {
@@ -357,11 +214,28 @@ function period(e, elName) {
     }
   }
 
+  function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+      timerDiv.textContent = time;
+      time--;
+      if (time < 0) {
+        lost()
+        next()
+        if (current === totalIdioms) {
+          return clearInterval(counter)
+        } else {
+          clearInterval(counter)
+          startTimer(sec)
+        }
+      }
+    }
+  }
+
   guessedWord()
   generateButtons()
   generateAnswer()
 }
-
 
 const reset = () => {
   mistakes = 0
@@ -380,31 +254,116 @@ const reset = () => {
   perc.innerHTML = "0%"
   rgt.style.display = 'none'
   wrng.style.display = 'none'
-  aboutGame.style.display = 'none'
   containerGame.style.display = 'flex'
-  mailForm.style.display = "none"
-  canvasContainer.style.display = "none"
+  mainMenu.style.display = "none"
 }
 
-var itr = iterable()
-itr.forEach(function (el, inx, arr) {
-  shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
-  let l = document.createElement('li')
-  l.innerHTML = el['name']
-  l.addEventListener('click', function () {
+let idioma = "а"
+let idioms = "ы"
+function returnIdiom(arr) {
+  if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
+}
 
-    reset()
-    period(el, el['name'])
+const url = "https://chandao.ru/idioms/"
 
+fetch(url).then(
+  (res) => res.json()).then(function (data) {
+    rounds = data;
+    const st = "Online"
+    onOffLine(rounds, st)
+
+  }).catch((e) => {
+    console.log(e)
+    itr = iterable()
+    const st = "Offline или неполадки с сервером"
+    onOffLine(itr, st)
   })
-  menu.appendChild(l)
-})
+
+function onOffLine(itr, stat) {
+  let levels = function (sec, bt, lvl) {
+    btns.forEach(btn => {
+      btn.style.background = "rgb(190, 240, 241)" ? btn.style.background = "#eef2f3" : btn.style.background = "rgb(190, 240, 241)"
+    })
+    catList.innerHTML = ""
+    bt.style.background = "rgb(190, 240, 241)"
+
+    // if (bt === learnBtn) {
+    //   let learn = true
+
+    //   itr.forEach(function (el, inx, arr) {
+    //     shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
+    //     let l = document.createElement('li')
+
+    //     l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
+    //     l.style.listStyleType = "none"
+    //     catList.appendChild(l)
+    //     l.addEventListener('click', function () {
+    //       reset()
+    //       period(el, el['name'], null, null, learn, null)
+    //     })
+    //   })
+    // } else
+     if (bt === timerLess) {
+      let tmr = true
+      itr.forEach(function (el, inx, arr) {
+        shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
+        let l = document.createElement('li')
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
+        l.style.listStyleType = "none"
+        catList.appendChild(l)
+        l.addEventListener('click', function () {
+          reset()
+          period(el, el['name'], null, null, null, tmr)
+        })
+      })
+    }
+    else
+      itr.forEach(function (el, inx, arr) {
+        shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
+        let l = document.createElement('li')
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
+        l.style.listStyleType = "none"
+        catList.appendChild(l)
+        l.addEventListener('click', function () {
+          reset()
+          period(el, el['name'], sec, lvl)
+        })
+      })
+  }
+  // learnBtn.onclick = () => {
+  //   levels(null, learnBtn, null)
+  // }
+
+  btnOverlay1.onclick = () => {
+    levels(25, btnOverlay1, 1)
+  }
+
+  btnOverlay2.onclick = () => {
+    levels(20, btnOverlay2, 2)
+  }
+
+  btnOverlay3.onclick = () => {
+    levels(15, btnOverlay3, 3)
+  }
+
+  btnOverlay4.onclick = () => {
+    levels(10, btnOverlay4, 4)
+  }
+
+  timerLess.onclick = () => {
+    levels(null, timerLess, null)
+  }
+  stat==="Online"
+  ?sourse.innerHTML = `<div style="color: green;">${stat}</div>`
+  :sourse.innerHTML = `<div style="color: red;">${stat}</div>`
+}
 
 let defaultInstallEvent = null
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault()
   defaultInstallEvent = event
 })
-downLoad.addEventListener('click', (event) => {
+learnBtn.addEventListener('click', (event) => {
   defaultInstallEvent.prompt()
 })
+console.log(learnBtn);

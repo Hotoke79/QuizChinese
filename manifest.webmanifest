@@ -1,9 +1,9 @@
 {
-    "name": "Git Shifu",
+    "name": "Chengyu Shifu",
     "start_url": "index.html",
     "orientation": "portrait",
     "display": "fullscreen",
-    "version": 1.1,
+    "version": "2.4",
     "icons": [{
         "src": "Cheng.png",
         "sizes": "512x512",
