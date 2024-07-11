@@ -624,3 +624,11 @@ body {
     font-style: normal; 
     font-weight: normal; 
   } 
+
+  @media all and (display-mode: standalone) {
+    #pwa-install{
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

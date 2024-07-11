@@ -69,20 +69,20 @@ function period(e, elName, sec, lvl, l, t) {
   else
     startTimer(sec)
   about.innerHTML = elName
-  !t ? level.innerHTML = `Тест ${lvl}` : level.innerHTML = ``
+  !t ? level.innerHTML = `TEST ${lvl}` : level.innerHTML = ``
 
   var totalIdioms = extract(e['reveal']).length
   var fraction = 1 / totalIdioms * 100;
   var percents = Math.round(current * fraction) + "%"
 
   descr.innerHTML = e['descriptio'][current]
-  t ? reveal.innerHTML = 'В режиме "Без таймера" подсказки отключены' : reveal.innerHTML = e['reveal'][current]
+  t ? reveal.innerHTML = 'Hints are unavalable in timerless mode' : reveal.innerHTML = e['reveal'][current]
 
   function generateAnswer() {
     answer = extract(e['reveal'])[current]
   }
   function reloadButt() {
-    var btnReload = `<h3 style="color: green;">Ваш результат</h3>`;
+    var btnReload = `<h3 style="color: green;">Yor result</h3>`;
     descr.innerHTML = btnReload;
   }
 
@@ -205,7 +205,7 @@ function period(e, elName, sec, lvl, l, t) {
       clicked = [];
       wsl.innerHTML = "* * * *"
       descr.innerHTML = e['descriptio'][current];
-      t ? reveal.innerHTML = 'В режиме "Без таймера" подсказки отключены' : reveal.innerHTML = e['reveal'][current]
+      t ? reveal.innerHTML = 'Hints are unavalable in timerless mode' : reveal.innerHTML = e['reveal'][current]
       generateAnswer();
       generateButtons();
     } else {
@@ -264,7 +264,7 @@ function returnIdiom(arr) {
   if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
 }
 
-const url = "https://chandao.ru/idioms/"
+const url = "https://chandao.ru/idiomsEn/"
 
 fetch(url).then(
   (res) => res.json()).then(function (data) {
@@ -275,7 +275,7 @@ fetch(url).then(
   }).catch((e) => {
     console.log(e)
     itr = iterable()
-    const st = "Offline или неполадки с сервером"
+    const st = "Offline or serverside failure"
     onOffLine(itr, st)
   })
 
@@ -287,22 +287,6 @@ function onOffLine(itr, stat) {
     catList.innerHTML = ""
     bt.style.background = "rgb(190, 240, 241)"
 
-    // if (bt === learnBtn) {
-    //   let learn = true
-
-    //   itr.forEach(function (el, inx, arr) {
-    //     shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
-    //     let l = document.createElement('li')
-
-    //     l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
-    //     l.style.listStyleType = "none"
-    //     catList.appendChild(l)
-    //     l.addEventListener('click', function () {
-    //       reset()
-    //       period(el, el['name'], null, null, learn, null)
-    //     })
-    //   })
-    // } else
      if (bt === timerLess) {
       let tmr = true
       itr.forEach(function (el, inx, arr) {
@@ -330,10 +314,7 @@ function onOffLine(itr, stat) {
         })
       })
   }
-  // learnBtn.onclick = () => {
-  //   levels(null, learnBtn, null)
-  // }
-
+ 
   btnOverlay1.onclick = () => {
     levels(25, btnOverlay1, 1)
   }

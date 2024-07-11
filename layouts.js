@@ -6,7 +6,8 @@ mainMenu.setAttribute('class', 'mainMenu')
 
 const learnBtn = document.createElement('div')
 learnBtn.setAttribute('class', 'learn')
-learnBtn.innerText ="Обучние"
+learnBtn.setAttribute('id', 'pwa-install')
+learnBtn.innerText ="Install app"
 
 const btnContainer = document.createElement('div')
 btnContainer.setAttribute('id', 'btnContainer')
@@ -23,7 +24,7 @@ var myHtml = '<div class="cont">' +
   '                    <span style="--i:16;">成语师傅</span>' +
   '                </div>' +
   '            </div>';
-const selectMode = "Выберите режим"
+const selectMode = "Select mode"
 const catList = document.createElement('div')
 catList.setAttribute("id", "catList")
 catList.innerHTML=`${selectMode}${myHtml}`
@@ -43,7 +44,7 @@ btnOverlay4.setAttribute('class', 'menuOpts')
 
 const timerLess = document.createElement('div')
 timerLess.setAttribute('class', 'learn')
-timerLess.innerText ="Без таймера"
+timerLess.innerText ="Without timer"
 
 const sourse = document.createElement('div')
 sourse.setAttribute('class', 'sourse')
@@ -58,7 +59,7 @@ mainMenu.append(sourse,learnBtn, btnContainer, timerLess, catList)
 //create header
 const menuBtn = document.createElement('div')
 menuBtn.setAttribute("class", "menuBtn")
-menuBtn.innerText = "МЕНЮ"
+menuBtn.innerText = "MENU"
 
 menuBtn.addEventListener('click', function () {
   window.location.reload()
