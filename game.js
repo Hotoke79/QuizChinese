@@ -258,11 +258,11 @@ const reset = () => {
   mainMenu.style.display = "none"
 }
 
-let idioma = "а"
-let idioms = "ы"
-function returnIdiom(arr) {
-  if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
-}
+// let idioma = "а"
+// let idioms = "ы"
+// function returnIdiom(arr) {
+//   if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
+// }
 
 const url = "https://chandao.ru/idiomsEn/"
 
@@ -292,7 +292,7 @@ function onOffLine(itr, stat) {
       itr.forEach(function (el, inx, arr) {
         shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
         let l = document.createElement('li')
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Idioms</div>`
         l.style.listStyleType = "none"
         catList.appendChild(l)
         l.addEventListener('click', function () {
@@ -305,7 +305,7 @@ function onOffLine(itr, stat) {
       itr.forEach(function (el, inx, arr) {
         shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
         let l = document.createElement('li')
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Идиом${returnIdiom(el["descriptio"].length)}</div>`
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Idioms</div>`
         l.style.listStyleType = "none"
         catList.appendChild(l)
         l.addEventListener('click', function () {
