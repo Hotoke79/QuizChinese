@@ -1,6 +1,6 @@
 {
     "name": "Quiz-Chinese",
-    "start_url": "https://hotoke79.github.io/QuizChinese",
+    "start_url": "index.html",
     "orientation": "portrait",
     "display": "fullscreen",
     "version": "2.4",

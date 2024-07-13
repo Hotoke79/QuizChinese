@@ -347,4 +347,3 @@ window.addEventListener('beforeinstallprompt', (event) => {
 learnBtn.addEventListener('click', (event) => {
   defaultInstallEvent.prompt()
 })
-console.log(learnBtn);
