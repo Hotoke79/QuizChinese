@@ -3,7 +3,7 @@
     "start_url": "index.html",
     "orientation": "portrait",
     "display": "fullscreen",
-    "version": 2.4,
+    "version": "2.4",
     "icons": [{
         "src": "Cheng.png",
         "sizes": "512x512",

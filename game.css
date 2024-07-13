@@ -625,10 +625,19 @@ body {
     font-weight: normal; 
   } 
 
-  @media all and (display-mode: standalone) {
+  /* @media all and (display-mode: standalone) {
     #pwa-install{
       display: none;
       opacity: 0;
       visibility: hidden;
     }
-  }
+  } */
+
+  #pwa-install {
+    display: none;
+}
+@media (display-mode: browser) {
+    #pwa-install {
+        display: block;
+    }
+}
