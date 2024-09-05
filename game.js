@@ -356,7 +356,7 @@ function onOffLine(itr) {
         shuffle(itr[inx]['answer'], itr[inx]['description'], itr[inx]['examples'])
         let l = document.createElement('li')
 
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Идиом${returnIdiom(el["description"].length)}</div>`
+        l.innerHTML =`${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Idioms</div>`
         l.style.listStyleType = "none"
         catList.appendChild(l)
         l.addEventListener('click', function () {
@@ -370,7 +370,7 @@ function onOffLine(itr) {
         let quiz = true
         shuffle(itr[inx]['answer'], itr[inx]['description'], itr[inx]['examples'])
         let l = document.createElement('li')
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Идиом${returnIdiom(el["description"].length)}</div>`
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Idioms</div>`
         l.style.listStyleType = "none"
         catList.append(l)
         l.addEventListener('click', function () {
@@ -399,7 +399,7 @@ document.addEventListener('click', (e) => {
    if (!cat.contains(e.target)) dropDownLearn.classList.remove('show')
  })
 
-const url = "idiomsEn.json"
+const url = "https://chandao.ru/idiomsEn"
 fetch(url).then(
   (res) => res.json()).then(function (data) {
     localStorage.setItem("idioms", JSON.stringify(data))

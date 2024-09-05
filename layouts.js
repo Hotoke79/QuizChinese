@@ -6,7 +6,7 @@ mainMenu.setAttribute('class', 'mainMenu')
 
 const learnBtn = document.createElement('div')
 learnBtn.setAttribute('class', 'learn')
-learnBtn.innerText ="Содержание"
+learnBtn.innerText ="CONTENT"
 
 var myHtml = '<div class="cont">' +
   '                <div class="boxx">' +
@@ -27,7 +27,7 @@ catList.innerHTML=`${selectMode}${myHtml}`
 
 const timerLess = document.createElement('div')
 timerLess.setAttribute('class', 'learn')
-timerLess.innerText ="Викторина"
+timerLess.innerText ="QUIZ"
 
 const btns = [learnBtn, timerLess]
 
@@ -39,7 +39,7 @@ containerGame.setAttribute("class", "containerGame")
 
 const menuBtn = document.createElement('div')
 menuBtn.setAttribute("class", "menuBtn")
-menuBtn.innerText = "МЕНЮ"
+menuBtn.innerText = "MENU"
 
 menuBtn.addEventListener('click', function () {
   reset(null, null, catList)
@@ -128,7 +128,7 @@ head.setAttribute("class", "header")
 
 const mB = document.createElement('div')
 mB.setAttribute("class", "menuBtn")
-mB.innerText="МЕНЮ"
+mB.innerText="MENU"
 
 const cat = document.createElement('div')
 cat.setAttribute("class", "titleAbout")
