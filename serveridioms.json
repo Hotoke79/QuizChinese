@@ -1,7 +1,64 @@
 [
     {
+        "name": "Аналогии",
+        "description": [
+            "Дословно: хороший меч не стареет. А если по-русски то: старый конь борозды не испортит или тряхнуть стариной.",
+            "Дословно: один камень - две птицы. По-нашему будет конечно же - одним выстрелом убить двух зайцев.",
+            "Дословно: утопить лодку и разбить котел. Т.е. сжечь мосты, исключить пути к отступлению.",
+            "Дословно: днем видеть сны. Русские аналоги: витать в облаках, строить замки из песка. Т.е. предаваться малосбыточным мечтам.",
+            "Дословно: любишь дом - люби и ворона (на крыше). любишь кататься - люби и санки возить.",
+            "Дословно: материала много, а пользы мало. Велика фигура, да дура по-русски.",
+            "Дословно: нарисовав дракона подрисовать зрачки. Иначе: последний штрих, вишенка на торте.",
+            "Дословно: камень утонул в море. По-нашему: кануть в воду, бесследно исчезнуть.",
+            "Дословно: слева, справа - становится трудно. Куда ни киннь - везде клин",
+            "Дословно: зуб менять на зуб. У нас - глаз за глаз",
+            "Дословно: Мутная вода, нащупывать рыбу. По-нашему: ловить рыбу в мутной воде",
+            "Дословно: На половину войти в землю. По-нашему: одной ногой в могиле, дышать на ладан.",
+            "Дословно: начало, конец - сног на голову. По-нашему: ставить телегу впереди лошади",
+            "Дословно: беда с неба падает. Как снег на голову",
+            "Голова тяжелая, а ноги леггие. По-нашему: колосс на глинянных ногах<br>. Говорится о чем то массивном, но не устойчивом.",
+            "Дословно: Плакать, смеяться не получается. По-нашему: смех сквозь слезы."
+        ],
+        "answer": [
+            "宝刀不老 <br> bǎo dāo bù lǎo",
+            "一石二鸟 <br> yī shí èr niǎo",
+            "沉舟破釜 <br> chén zhōu pò fǔ",
+            "白日做梦 <br> bái rì zuò mèng",
+            "爱屋及乌 <br> ài wū jí wū",
+            "大材小用 <br> dà cái xiǎo yòng",
+            "画龙点睛 <br> huà lóng diǎn jīng",
+            "石沉大海 <br> shí chén dà hǎi",
+            "左右为难 <br> zuǒ yòu wéi nán",
+            "以牙还牙 <br> yǐ yá huán yá",
+            "浑水摸鱼 <br> hún shuǐ mō yú",
+            "半截入土 <br> bàn jié rù tǔ",
+            "本末倒置 <br> běn mò dǎo zhì",
+            "祸从天降 <br> huò cóng tiān jiàng",
+            "头重脚轻 <br> tóu zhòng jiǎo qīng",
+            "哭笑不得 <br> kū xiào bù dé"
+        ],
+        "examples": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
         "name": "Urgency",
-        "descriptio": [
+        "description": [
             "a hundred weight hanging by a hair—in imminent peril</br>在这****, 万分危急的时候, 援军到了</br>Zài zhè qiānjūnyīfà, wànfēn wēijí de shíhou, yuánjūn dàoliǎo.</br>In this moment of extreme crisis when everything was hanging by a single thread, the relief troops arrived.",
             "brook no delay; demand immediate attention; be of great urgency</br>****的行动</br>action which brooks no delay",
             "very impatient; unable to hold back; too impatient to wait; anxious to do sth</br>他们都****地想知道发生了什么事。</br>Tāmen dōu pòbùjídài de xiǎng zhīdao fāshēng le shénme shì.</br>They were impatient to know what had happened",
@@ -9,18 +66,26 @@
             "The fire is singeing the eyebrows.—a desperate situation; at a crucial point</br>****的事儿</br>matter of the utmost urgency",
             "as pressing as a fire singeing one's eyebrows—extremely urgent</br>母亲寄来两万块钱, 解了我****</br>Mǔqin jìlái liǎngwàn kuài qián, jiě le wǒ ránméizhījí.</br>Mother sent me 20,000 yuan addressing my pressing need."
         ],
-        "reveal": [
-            "千钧一发</br>qiān jūn yī fà</br>a matter of life or death",
-            "刻不容缓</br>kè bù róng huǎn",
-            "迫不及待</br>pò bù jí dài",
-            "十万火急</br>shí wàn huǒ jí",
-            "火烧眉毛</br>huǒ shāo méi máo",
-            "燃眉之急</br> rán méi zhī jí"
+        "answer": [
+            "千钧一发 <br> qiān jūn yī fà",
+            "刻不容缓 <br> kè bù róng huǎn",
+            "迫不及待 <br> pò bù jí dài",
+            "十万火急 <br> shí wàn huǒ jí",
+            "火烧眉毛 <br> huǒ shāo méi máo",
+            "燃眉之急 <br> rán méi zhī jí"
+        ],
+        "examples": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     {
         "name": "Insects",
-        "descriptio": [
+        "description": [
             "a moth darting into a flame—bring destruction upon oneself; seek one's own doom</br>",
             "slip out of a predicament like a cicada sloughing its skin—escape by cunning manoeuvring</br>",
             "pluck the laurel branch from the Toad Palace—succeed in the highest imperial examinations</br>",
@@ -30,20 +95,30 @@
             "thread of a spider and trail of a horse—clues; traces",
             "covet gains ahead without being aware of danger behind as the mantis stalk the cicade,unaware of the oriole behind"
         ],
-        "reveal": [
-            "飞蛾扑火</br>fēi é pū huǒ",
-            "金蝉脱壳</br>jīn chán tuō qiào",
-            "蟾宫折桂</br>chán gōng zhé guì",
-            "蚕食鲸吞</br>cán shí jīng tūn",
-            "蜻蜓点水</br>qīng tíng diǎn shuǐ</br>做调查工作不能蜻蜓点水, 要深入实际</br>Zuò diàochá gōngzuò bù néng qīngtíngdiǎnshuǐ, yào shēnrù shíjì.</br>To make an investigation, one should go into matters deeply, not just scratch the surface.",
-            "螳臂挡车</br>táng bì dǎng chē",
-            "蛛丝马迹</br>zhū sī mǎ jì</br>此案有蛛丝马迹可寻。</br>There are clues in the case.",
-            "螳螂捕蝉，黄雀在后</br>táng láng bǔ chán，huáng què zài hòu"
+        "answer": [
+            "飞蛾扑火 <br> fēi é pū huǒ",
+            "金蝉脱壳 <br> jīn chán tuō qiào",
+            "蛾眉皓齒 <br> é méi hào chǐ",
+            "蚕食鲸吞 <br> cán shí jīng tūn",
+            "蜻蜓点水 <br> qīng tíng diǎn shuǐ",
+            "螳臂挡车 <br> táng bì dǎng chē",
+            "蛛丝马迹 <br> zhū sī mǎ jì",
+            "螳螂捕蝉 <br> táng láng bǔ chán <br>full version<br>螳螂捕蝉，黄雀在后<br>táng láng bǔ chán, huáng què zài hòu"
+        ],
+        "examples": [
+            "",
+            "",
+            "",
+            "",
+            "做调查工作不能蜻蜓点水, 要深入实际</br>Zuò diàochá gōngzuò bù néng qīngtíngdiǎnshuǐ, yào shēnrù shíjì.</br>To make an investigation, one should go into matters deeply, not just scratch the surface.",
+            "",
+            "此案有蛛丝马迹可寻。</br>There are clues in the case.",
+            ""
         ]
     },
     {
         "name": "Animals",
-        "descriptio": [
+        "description": [
             "all things take on a new aspect; everything looks new and fresh</br>(in the spring) nature takes on a new look (idiom)</br>",
             "cover the head and sneak away like a rat—scurry (or scamper) off like a frightened rat</br>",
             "crowing like a cock and stealing like a dog (idiom)</br>",
@@ -60,30 +135,47 @@
             "have a back like a tiger's and a waist like a bear's—tough and stocky",
             "stand by a stump waiting for hares bump into it—trust to luck; wait for a windfall",
             "white hair and ruddy complexion—healthy in old age; hale and hearty"
-
         ],
-        "reveal": [
-            "万象更新</br>wàn xiàng gēng xīn",
-            "抱头鼠窜</br>bào tóu shǔ cuàn",
-            "鸡鸣狗盗</br>jī míng gǒu dào</br>鸡鸣狗盗之徒</br>mean people who resort to petty tricks",
-            "千军万马</br>qiān jūn wàn mǎ",
-            "亡羊补牢</br>wáng yáng bǔ láo</br>亡羊补牢, 犹未为晚</br>Wángyángbǔláo, yóu wèi wéi wǎn</br>It is not too late to mend the fold even after the sheep is lost. or It’s never too late to try.",
-            "杯弓蛇影</br>bēi gōng shé yǐng",
-            "鹤立鸡群</br>hè lì jī qún",
-            "对牛弹琴</br>duì niú tán qín",
-            "如鱼得水</br>rú yú dé shuǐ",
-            "鸟语花香</br>niǎo yǔ huā xiāng",
-            "为虎作伥 </br>wèi hǔ zuò chāng</>伥</br>ghost of a man who fell victim to a tiger, yet helps the tiger to devour others",
-            "黔驴技穷</br>qián lǘ jì qióng",
-            "鼠目寸光</br>shǔ mù cùn guāng",
-            "虎背熊腰</br>hǔ bèi xióng yāo",
-            "守株待兔</br>shǒu zhū dài tù",
-            "鹤发童颜</br>hè fà tóng yán"
+        "answer": [
+            "万象更新 </br> wàn xiàng gēng xīn",
+            "抱头鼠窜 </br> bào tóu shǔ cuàn",
+            "鸡鸣狗盗 </br> jī míng gǒu dào",
+            "千军万马 </br> qiān jūn wàn mǎ",
+            "亡羊补牢 </br> wáng yáng bǔ láo",
+            "杯弓蛇影 </br> bēi gōng shé yǐng",
+            "鹤立鸡群 </br> hè lì jī qún",
+            "对牛弹琴 </br> duì niú tán qín",
+            "如鱼得水 </br> rú yú dé shuǐ",
+            "鸟语花香 </br> niǎo yǔ huā xiāng",
+            "为虎作伥 </br> wèi hǔ zuò chāng </>伥</br>ghost of a man who fell victim to a tiger, yet helps the tiger to devour others",
+            "黔驴技穷 </br> qián lǘ jì qióng",
+            "鼠目寸光 </br> shǔ mù cùn guāng",
+            "虎背熊腰 </br> hǔ bèi xióng yāo",
+            "守株待兔 </br> shǒu zhū dài tù",
+            "鹤发童颜 </br> hè fà tóng yán"
+        ],
+        "examples": [
+            "",
+            "",
+            "鸡鸣狗盗之徒</br>mean people who resort to petty tricks",
+            "",
+            "亡羊补牢, 犹未为晚</br>Wángyángbǔláo, yóu wèi wéi wǎn</br>It is not too late to mend the fold even after the sheep is lost. or It’s never too late to try.",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     {
         "name": "Spring",
-        "descriptio": [
+        "description": [
             "sunlit and enchanting scene of spring; lovely spring sunshine",
             "riot (or blaze) of colour; thousands of purples and reds; a profusion of flourishing trades",
             "Rain in spring is as precious as oil",
@@ -95,22 +187,34 @@
             "let a hundred flowers bloom—free development of different artistic forms and styles",
             "gentle breeze and light rain—in a gentle and mild way"
         ],
-        "reveal": [
-            "春光明媚</br>chūn guāng míng mèi",
-            "万紫千红</br>wàn zǐ qiān hóng</br> 百花盛开，万紫千红</br>Bǎihuā shèngkāi, wànzǐqiānhóng</br>Flowers of all sorts are blooming in a riot of colour.",
-            "春雨如油</br>chūn yǔ rú yóu",
-            "生机勃勃</br>shēng jī bó bó",
-            "春色满园</br>chūn sè mǎn yuán</br>春色满园关不住, 一枝红杏出墙来</br>chūnsèmǎnyuán guānbuzhù, yī zhī hóngxìngchūqiáng lái</br>Spring colours fill the garden but cannot all be contained. | For one spray of red apricot blossoms peeps out from the wall.",
-            "春意盎然</br>chūn yì àng rán</br>盎然</br>àng rán</>abundant",
-            "鸟语花香</br>niǎo yǔ huā xiāng",
-            "春暖花开</br>chūn nuǎn huā kāi",
-            "百花齐放</br>bǎi huā qí fàng",
-            "和风细雨</br>hé fēng xì yǔ</br>和风细雨地开展批评和自我批评</br>héfēngxìyǔ de kāizhǎn pīpíng hé zìwǒ pīpíng</br>make criticism and self-criticism in the manner of 'a gentle breeze and a mild rain'"
+        "answer": [
+            "春光明媚 <br> chūn guāng míng mèi",
+            "万紫千红 <br> wàn zǐ qiān hóng",
+            "春雨如油 <br> chūn yǔ rú yóu",
+            "生机勃勃 <br> shēng jī bó bó",
+            "春色满园 <br> chūn sè mǎn yuán",
+            "春意盎然 <br> chūn yì àng rán",
+            "鸟语花香 <br> niǎo yǔ huā xiāng",
+            "春暖花开 <br> chūn nuǎn huā kāi",
+            "百花齐放 <br> bǎi huā qí fàng",
+            "和风细雨 <br> hé fēng xì yǔ"
+        ],
+        "examples": [
+            "",
+            "百花盛开，万紫千红</br>Bǎihuā shèngkāi, wànzǐqiānhóng</br>Flowers of all sorts are blooming in a riot of colour.",
+            "",
+            "",
+            "春色满园关不住, 一枝红杏出墙来</br>chūnsèmǎnyuán guānbuzhù, yī zhī hóngxìngchūqiáng lái</br>Spring colours fill the garden but cannot all be contained. | For one spray of red apricot blossoms peeps out from the wall.",
+            "",
+            "",
+            "",
+            "",
+            "和风细雨地开展批评和自我批评</br>héfēngxìyǔ de kāizhǎn pīpíng hé zìwǒ pīpíng</br>make criticism and self-criticism in the manner of 'a gentle breeze and a mild rain'"
         ]
     },
     {
         "name": "Dragon",
-        "descriptio": [
+        "description": [
             "endless stream of horse and carriages; heavy traffic",
             "doughty as a dragon and lively as a tiger",
             "lit. the dragon wars, the tiger battles; fierce battle between giants",
@@ -120,37 +224,60 @@
             "dangerous spot as a dragon's pool and tiger's den--a danger spot",
             "walk like a dragon and pace like a tiger; a mighty and awe-inspiring bearing"
         ],
-        "reveal": [
-            "车水马龙</br>chē shuǐ mǎ lóng</br>越南河内的夜晚，街道人流拥挤、车水马龙</br>yuè nán hé nèi de yè wǎn ， jiē dào rén liú yōng jǐ 、 chē shuǐ mǎ lóng</br>The streets of Hanoi bustled with evening traffic and pedestrians.",
-            "生龙活虎</br>shēng lóng huó hǔ</br>这种自由能让你生龙活虎</br>zhè zhǒng zì yóu néng ràng nǐ shēng lóng huó hǔ</br>This freedom can energize you.",
-            "龙争虎斗</br>lóng zhēng hǔ dòu</br>他们会在《龙争虎斗IV》中砍杀人头、断人脊骨</br>tā mén huì zài 《 lóng zhēng hǔ dǒu IV》 zhōng kǎn shā rén tóu 、 duàn rén jǐ gǔ</br>They are severing heads and snapping spines in Mortal Kombat IV.",
-            "龙马精神</br>lóng mǎ jīng shén</br>祝好运、健康、龙马精神伴你度过一个快乐新年</br>zhù hǎo yùn 、 jiàn kāng 、 lóng mǎ jīng shén bàn nǐ dù guò yī gè kuài lè xīn nián</br>Good luck, good health, good cheer. I wish you a happy New Year",
-            "龙飞凤舞</br>lóng fēi fèng wǔ</br>所以，他一边龙飞凤舞一边说，我在军团的职责是什么呢</br>suǒ yǐ ， tā yī biān lóng fēi fèng wǔ yī biān shuō ， wǒ zài jūn tuán de zhí zé shì shén me ne</br>So, he said as he was scrawling, what will be my duties with the company?",
-            "龙腾虎跃</br>lóng téng hǔ yuè</br>同时，祝愿IT精英们在各自的领域里龙腾虎跃</br>tóng shí ， zhù yuàn IT jīng yīng mén zài gè zì de lǐng yù lǐ lóng téng hǔ yuè</br>Meanwhile, we wish IT elites thriving in their own fields,",
-            "龙潭虎穴</br>lóng tán hǔ xué</br>潭 tán - deep pool, pond",
-            "龙骧虎步</br>lóng xiāng hǔ bù</br>骧 xiāng - to run friskily, to raise, to hold high"
+        "answer": [
+            "车水马龙 <br> chē shuǐ mǎ lóng",
+            "生龙活虎 <br> shēng lóng huó hǔ",
+            "龙争虎斗 <br> lóng zhēng hǔ dòu",
+            "龙马精神 <br> lóng mǎ jīng shén",
+            "龙飞凤舞 <br> lóng fēi fèng wǔ",
+            "龙腾虎跃 <br> lóng téng hǔ yuè",
+            "龙潭虎穴 <br> lóng tán hǔ xué",
+            "龙骧虎步 <br> lóng xiāng hǔ bù"
+        ],
+        "examples": [
+            "越南河内的夜晚，街道人流拥挤、车水马龙</br>yuè nán hé nèi de yè wǎn ， jiē dào rén liú yōng jǐ 、 chē shuǐ mǎ lóng</br>The streets of Hanoi bustled with evening traffic and pedestrians.",
+            "这种自由能让你生龙活虎</br>zhè zhǒng zì yóu néng ràng nǐ shēng lóng huó hǔ</br>This freedom can energize you.",
+            "他们会在《龙争虎斗IV》中砍杀人头、断人脊骨</br>tā mén huì zài 《 lóng zhēng hǔ dǒu IV》 zhōng kǎn shā rén tóu 、 duàn rén jǐ gǔ</br>They are severing heads and snapping spines in Mortal Kombat IV.",
+            "祝好运、健康、龙马精神伴你度过一个快乐新年</br>zhù hǎo yùn 、 jiàn kāng 、 lóng mǎ jīng shén bàn nǐ dù guò yī gè kuài lè xīn nián</br>Good luck, good health, good cheer. I wish you a happy New Year",
+            "所以，他一边龙飞凤舞一边说，我在军团的职责是什么呢</br>suǒ yǐ ， tā yī biān lóng fēi fèng wǔ yī biān shuō ， wǒ zài jūn tuán de zhí zé shì shén me ne</br>So, he said as he was scrawling, what will be my duties with the company?",
+            "同时，祝愿IT精英们在各自的领域里龙腾虎跃</br>tóng shí ， zhù yuàn IT jīng yīng mén zài gè zì de lǐng yù lǐ lóng téng hǔ yuè</br>Meanwhile, we wish IT elites thriving in their own fields,",
+            "潭 tán - deep pool, pond",
+            "骧 xiāng - to run friskily, to raise, to hold high"
         ]
     },
     {
         "name": "Birds",
-        "descriptio": [
-            "</br>cheering excitedly; jubilant</br>",
-            "</br>crow and peacock make no sound; absolute silence; not a single voice can be heard; absolute silence</br>",
-            "</br>the fabled roc flies ten thousand miles; one's future prospects are brilliant</br>",
-            "</br>wind sighing and crane calling; fig. to panic at the slightest move; to be jittery</br>",
-            "</br>to be advanced in age</br>"
+        "description": [
+            "",
+            "",
+            "cheering excitedly; jubilant</br>",
+            "crow and peacock make no sound; absolute silence; not a single voice can be heard; absolute silence</br>",
+            "the fabled roc flies ten thousand miles; one's future prospects are brilliant</br>",
+            "wind sighing and crane calling; fig. to panic at the slightest move; to be jittery</br>",
+            "to be advanced in age</br>"
         ],
-        "reveal": [
-            "欢呼雀跃</br>huān hū què yuè</br>一小时以后，营救船又在雾中出现，村民们欢呼雀跃地跑去迎接</br> yī xiǎoshí yǐhòu ， yíngjiùchuán yòu zài wù zhōng chūxiàn ， cūnmínmén huānhūquèyuè dì pǎoqù yíngjiē</br>An hour later, the rescue boat reappeared through the fog and the cheering villagers ran to greet them.",
-            "鸦雀无声</br>yā què wú shēng</br>突然一切都变得鸦雀无声</br>tūrán yīqiēdoū biàndé yāquèwúshēng</br>Suddenly, everything grew quiet",
-            "鹏程万里</br>péng chéng wàn lǐ</br>祝你新年快乐，鹏程万里！</br>zhù nǐ xīnnián kuàilè ， péngchéngwànlǐ</br>Wish you a happy New Year, and promising future!",
-            "风声鹤唳</br>fēng shēng hè lì</br>犯了罪的人总是感到风声鹤唳</br>fàn le zuì de rén zǒngshì gǎndào fēngshēnghèlì</br>A guilty man apprehends danger in every sound.",
-            "鸡皮鹤发</br>jī pí hè fā</br>现代科技使每个人延长生命，但活愈老，长得愈老，鸡皮鹤发不是别人观感问题，而是妳的自我认同问题</br>xiàndài kējì shǐ měigèrén yáncháng shēngmìng ， dàn huó yù lǎo ， cháng dé yù lǎo ， jīpíhèfā bùshì biérén guāngǎn wèntí ， érshì tade zìwǒ rèntóng wèntí</br>Modern science and technology enables everybody to live a long life, but we still grow old. To have chicken skin and snowy hair is not just a problem for other people, but one that you and I face too."
+        "answer": [
+            "鹤发童颜 <br> hè fà tóng yán",
+            "鹤立鸡群 <br> hè lì jī qún",
+            "欢呼雀跃 <br> huān hū què yuè",
+            "鸦雀无声 <br> yā què wú shēng",
+            "鹏程万里 <br> péng chéng wàn lǐ",
+            "风声鹤唳 <br> fēng shēng hè lì",
+            "鸡皮鹤发 <br> jī pí hè fā"
+        ],
+        "examples": [
+            "",
+            "",
+            "一小时以后，营救船又在雾中出现，村民们欢呼雀跃地跑去迎接</br> yī xiǎoshí yǐhòu ， yíngjiùchuán yòu zài wù zhōng chūxiàn ， cūnmínmén huānhūquèyuè dì pǎoqù yíngjiē</br>An hour later, the rescue boat reappeared through the fog and the cheering villagers ran to greet them.",
+            "突然一切都变得鸦雀无声</br>tūrán yīqiēdoū biàndé yāquèwúshēng</br>Suddenly, everything grew quiet",
+            "祝你新年快乐，鹏程万里！</br>zhù nǐ xīnnián kuàilè ， péngchéngwànlǐ</br>Wish you a happy New Year, and promising future!",
+            "犯了罪的人总是感到风声鹤唳</br>fàn le zuì de rén zǒngshì gǎndào fēngshēnghèlì</br>A guilty man apprehends danger in every sound.",
+            "现代科技使每个人延长生命，但活愈老，长得愈老，鸡皮鹤发不是别人观感问题，而是妳的自我认同问题</br>xiàndài kējì shǐ měigèrén yáncháng shēngmìng ， dàn huó yù lǎo ， cháng dé yù lǎo ， jīpíhèfā bùshì biérén guāngǎn wèntí ， érshì tade zìwǒ rèntóng wèntí</br>Modern science and technology enables everybody to live a long life, but we still grow old. To have chicken skin and snowy hair is not just a problem for other people, but one that you and I face too."
         ]
     },
     {
         "name": "Anger, detest",
-        "descriptio": [
+        "description": [
             "to get really angry<br>",
             "lit. hair stands up in anger and tips off one's hat (idiom); fig. seething in anger; raise one's hackles<br>",
             "suddenly become very angry<br>",
@@ -160,7 +287,7 @@
             "to hate evil as one hates an enemy<br>",
             "to hate somebody to the bone"
         ],
-        "reveal": [
+        "answer": [
             "火冒三丈<br>huǒ mào sān zhàng<br>他的评论把她气得火冒三丈<br>tāde pínglùn bǎ tā qìdé huǒmàosānzhàng<br>She was seething with rage at his remarks<br>他顽固不化把我气得火冒三丈<br>tā wángùbùhuà bǎwǒ qìdé huǒmàosānzhàng<br>His obstinacy drives me mad!<br>",
             "怒发冲冠<br>nù fā chōng guān<br>",
             "勃然大怒<br>bó rán dà nù",
@@ -169,43 +296,46 @@
             "深恶痛绝<br>shēn è tòng jué<br>我对种族偏见深恶痛绝<br>wǒ duì zhǒngzúpiānjiàn shēnètòngjué<br>Racial prejudice is (an) anathema to me.",
             "疾恶如仇<br>jí è rú chóu",
             "恨之入骨<br>hèn zhī rù gǔ<br>在恨之入骨的冲动下，他把仇人杀了<br>zài hènzhīrùgǔ de chōngdòng xià ， tā bǎ chóurén shā le<br>In a frenzy of hate he killed his enemy."
-        ]
+        ],
+        "examples": []
     },
     {
         "name": "Happy, joyous",
-        "descriptio": [
+        "description": [
             "give a wee smile, smile faintly<br>",
             "be radiant with smiles; be all smiles; one's smiles were thick enough to pluck off one's face<br>",
             "be pleasantly surprised; be overjoyed (at an unexpected gain, good news, etc.); joy beyond (all) expectations<br>",
             "overwhelmed/overcome with joy; extremely happy; outright glee; one's joy knew no bounds<br>"
         ],
-        "reveal": [
+        "answer": [
             "微微一笑<br>wēi wēi yī xiào<br>他向她微微一笑<br>tā xiàng tā wēiwēiyīxiào<br>He gave her a faint smile<br>她带着优越感微微一笑<br>tā dàizhe yōuyuègǎn wēiwēiyīxiào<br>She smiled in a condescending way.",
             "笑容可掬<br>xiào róng kě jū<br>他一跃而起，笑容可掬<br>tā yīyuèérqǐ xiàoróngkějū<br>He jumped to his feet with a big smile.",
             "喜出望外<br>xǐ chū wàng wài<br>听说我们队得了冠军，大家都喜出望外<br>tīngshuō wǒmenduì dé le guànjūn dàjiādōu xǐchūwàngwài<br>他见到她的第一反应竟是喜出望外<br>tā jiàndào tā de dì yī fǎnyìng jìng shì xǐchūwàngwài",
             "乐不可支<br>lè bù kě zhī<br>我们听到这个消息都乐不可支<br>wǒmen tīngdào zhège xiāoxi dōu lèbùkězhī<br>We were all overwhelmed with joy at the news<br>他因为中了彩票而乐不可支<br>tā yīnwèi zhòngle cǎipiào ér lèbùkězhī<br>He was on cloud nine because he had won the lottery"
-        ]
+        ],
+        "examples": []
     },
     {
         "name": "Grief, sorrow",
-        "descriptio": [
+        "description": [
             "weep in grief<br>",
             "felt like weeping but had no tears<br>",
             "lose control and cry out loud<br>",
             "sob inconsolably; cry so hard that no sound comes out; choke with sobs; feel extremely sad<br>",
             "drop a few silent tears; tears trickling down one's cheeks<br>"
         ],
-        "reveal": [
+        "answer": [
             "伤心落泪<br>shāng xīn luò lèi",
             "欲哭无泪<br>yù kū wú lèi<br>这次打击之大使她欲哭无泪<br>zhècì dǎjī zhīdà shǐ tā yùkūwúlèi<br>The intensity of the blow made her unabled to cry",
             "失声痛哭<br>shī shēng tòng kū<br>他如此体贴关心，我忍不住失声痛哭<br>tā rúcǐ tǐtiēguānxīn wǒ rěnbuzhù shīshēngtòngkū<br>Because he was being so kind and concerned, I broke down andcried",
             "泣不成声<br>qì bù chéng shēng<br>说到伤心处，他泣不成声<br>shuōdào shāngxīnchù tā qìbùchéngshēng<br>When he got to the saddest part of the story, he choked with sobs",
             "潸然泪下<br>shān rán lèi xià<br>我张嘴回答却潸然泪下<br>wǒ zhāngzuǐ huídá què shānránlèixià<br>I open my mouth to answer and collapse into tears<br>这些年轻女士中有几位动不动就潸然泪下<br>zhèxiē niánqīng nǚshìzhōng yǒu jǐwèi dòngbudòng jiù shānránlèixià<br>Some of the young ladies dissolve very easily into tears."
-        ]
+        ],
+        "examples": []
     },
     {
         "name": "Wisdom, intelligence",
-        "descriptio": [
+        "description": [
             "be erudite and well-informed; have a wide knowledge of things both ancient and modern<br>",
             "predict like a prophet; foresee with divine precision<br>",
             "wise and resourceful; be very full of guile<br>",
@@ -217,7 +347,7 @@
             "benefit by mutual discussion; draw on collective wisdom and absorb all useful ideas<br>",
             "draw inferences about other cases from one instance; infer other things from one fact<br>"
         ],
-        "reveal": [
+        "answer": [
             "博古通今<br>bó gǔ tōng jīn<br>博古通今的专家<br>bógǔtōngjīn de zhuānjiā<br>erudite and informed scholar",
             "料事如神<br>liào shì rú shén<br>我又不能料事如神，总不免要吃点小亏<br>wǒ yòu bùnéng liàoshìrúshén zǒng bùmiǎn yào chīdiǎn xiǎokuī<br>Foretellthings like a prophet, I cannot help taking a small loss",
             "足智多谋<br>zú zhì duō móu<br>这些妇女坚强勇敢，足智多谋<br>zhèxiē fùnǚ jiānqiáng yǒnggǎn zúzhìduōmóu<br>These women were strong, courageous and resourceful",
@@ -228,6 +358,7 @@
             "博大精深<br>bó dà jīng shēn<br>中华传统文化博大精深<br>zhōnghuá chuántǒng wénhuà bódàjīngshēn<br>Traditional Chinese culture is extensive and profound",
             "集思广益<br>jí sī guǎng yì<br>只有走群众路线，集思广益，才能把工作做好<br>zhǐyǒu zǒu qúnzhònglùxiàn jísīguǎngyì cáinéng bǎ gōngzuò zuòhǎo<br>Only by following the mass line and listening to all useful opinions can we make a good job of it",
             "举一反三<br>jǔ yī fǎn sān<br>在学习上要学会举一反三，触类旁通<br>zài xuéxí shang yào xuéhuì jǔyīfǎnsān chùlèipángtōng<br>Try to learn by analogy and judge the whole from the part"
-        ]
+        ],
+        "examples": []
     }
 ]

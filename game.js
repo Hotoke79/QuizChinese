@@ -1,8 +1,10 @@
-let answer = ''
+let Answer = ''
+let pinyin = []
 const maxWrong = 3
 let mistakes = 0
 let clicked = []
 let wordStatus
+let pinyinStatus
 
 let right = []
 let wrong = []
@@ -12,21 +14,24 @@ let sr = 0
 let itr
 let lvl
 
-function shuffle(obj1, obj2) {
+function shuffle(obj1, obj2, obj3) {
   var index = obj1.length
-  var rnd, tmp1, tmp2
+  var rnd, tmp1, tmp2, tmp3
 
   while (index) {
     rnd = Math.floor(Math.random() * index)
     index -= 1
     tmp1 = obj1[index]
     tmp2 = obj2[index]
+    tmp3 = obj3[index]
     obj1[index] = obj1[rnd]
     obj2[index] = obj2[rnd]
+    obj3[index] = obj3[rnd]
     obj1[rnd] = tmp1
     obj2[rnd] = tmp2
+    obj3[rnd] = tmp3
   }
-  return obj1, obj2
+  return obj1, obj2, obj3
 }
 
 const extract = (origArr) => {
@@ -36,60 +41,82 @@ const extract = (origArr) => {
   })
   return newArr
 }
+const extractPinyin = (origArr) => {
+  let newArrPin = []
+  newArrPin = origArr[current].split(' ').slice(2, 6)
+  return newArrPin
+}
 
-function period(e, elName, sec, lvl, l, t) {
+function period(e, elName, l) {
+  if (!l) {
+    mainMenu.remove()
+    content.appendChild(containerGame)
+    spanR.disabled = false
+    spanW.disabled = false
+    dropDown.appendChild(catList)
+  }
 
   if (l) {
-    mainMenu.style.display = "none"
-    containerGame.style.display = "none"
-    wrap.style.display = "flex"
-    stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+    mainMenu.remove()
+    containerGame.remove()
+    content.appendChild(wrap)
+    stDsc.setAttribute("class", "learnDescript")
+    stDsc.attr
+    stDsc.innerHTML = `<div style="overflow: scroll">` +
+      `<span style="color:green;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</span> <br> <span style="color: blue;font-size: calc(15px + 18 * (100vw/1600));">${e['answer'][current]}</span> <br> ${e['examples'][current].replaceAll(`class='hnt'`, `class='norm'`)}` +
+      `</div>`
     cat.innerText = elName
+    dropDownLearn.appendChild(catList)
 
     nxt.onclick = () => {
-      if (current >= e['reveal'].length - 1) {
+      if (current >= e['answer'].length - 1) {
         current = 0
-        stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+        stDsc.innerHTML = `<div style="overflow: scroll">` +
+          `<span style="color:green;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</span> <br> <span style="color: blue;font-size: calc(15px + 18 * (100vw/1600));">${e['answer'][current]}</span> <br> ${e['examples'][current].replaceAll(`class='hnt'`, `class='norm'`)}` +
+          `</div>`
       } else
         current++
-      stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+      stDsc.innerHTML = `<div style="overflow: scroll">` +
+        `<span style="color:green;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</span> <br> <span style="color: blue;font-size: calc(15px + 18 * (100vw/1600));">${e['answer'][current]}</span> <br> ${e['examples'][current].replaceAll(`class='hnt'`, `class='norm'`)}` +
+        `</div>`
     }
     prev.onclick = () => {
       if (current <= 0) {
-        current = e['reveal'].length - 1
-        stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+        current = e['answer'].length - 1
+        stDsc.innerHTML = `<div style="overflow: scroll">` +
+          `<span style="color:green;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</span> <br> <span style="color: blue;font-size: calc(15px + 18 * (100vw/1600));">${e['answer'][current]}</span> <br> ${e['examples'][current].replaceAll(`class='hnt'`, `class='norm'`)}` +
+          `</div>`
       } else
         current--
-      stDsc.innerHTML = e['descriptio'][current] + '<br>' + e['reveal'][current]
+      stDsc.innerHTML = `<div style="overflow: scroll">` +
+        `<span style="color:green;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</span> <br> <span style="color: blue;font-size: calc(15px + 18 * (100vw/1600));">${e['answer'][current]}</span> <br> ${e['examples'][current].replaceAll(`class='hnt'`, `class='norm'`)}` +
+        `</div>`
     }
-
-  } else if (t) {
-    counter = null
   }
-  else
-    startTimer(sec)
-  about.innerHTML = elName
-  !t ? level.innerHTML = `TEST ${lvl}` : level.innerHTML = ``
 
-  var totalIdioms = extract(e['reveal']).length
+  else
+  about.innerHTML = elName
+  var totalIdioms = extract(e['answer']).length
   var fraction = 1 / totalIdioms * 100;
   var percents = Math.round(current * fraction) + "%"
 
-  descr.innerHTML = e['descriptio'][current]
-  t ? reveal.innerHTML = 'Hints are unavalable in timerless mode' : reveal.innerHTML = e['reveal'][current]
+  desc_cont.innerHTML = `<div style="overflow: scroll;height: 100%;">` +
+    `<div style="color:blue;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</div>` +
+    `<br>` +
+    `<div>${e['examples'][current]}</div>` +
+    `</div>`
 
   function generateAnswer() {
-    answer = extract(e['reveal'])[current]
+    Answer = extract(e['answer'])[current]
   }
-  function reloadButt() {
-    var btnReload = `<h3 style="color: green;">Yor result</h3>`;
-    descr.innerHTML = btnReload;
+  function generatePinyin() {
+    pinyin = extractPinyin(e['answer'])
   }
 
   var chnCount = 0
 
   function generateButtons() {
-    var newAr = extract(e['reveal']);
+    var newAr = extract(e['answer']);
     const chunk = (arr, size) =>
       Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
         arr.slice(i * size, i * size + size)
@@ -119,12 +146,12 @@ function period(e, elName, sec, lvl, l, t) {
 
   handleGuess = (L) => {
     clicked.indexOf(L) === -1 ? clicked.push(L) : null;
-    if (answer.indexOf(L) >= 0) {
+    if (Answer.indexOf(L) >= 0) {
       document.getElementById(L).style.background = 'green'
       document.getElementById(L).style.color = 'white'
       guessedWord();
       checkIfGameWon();
-    } else if (answer.indexOf(L) === -1) {
+    } else if (Answer.indexOf(L) === -1) {
       mistakes++;
       document.getElementById(L).onclick = false
       document.getElementById(L).style.color = 'white'
@@ -133,9 +160,9 @@ function period(e, elName, sec, lvl, l, t) {
     }
   }
   function checkIfGameWon() {
-    if (wordStatus === answer) {
+    if (wordStatus === Answer) {
       spanR.innerHTML = ++sr;
-      right.unshift(answer);
+      right.unshift(Answer);
       rgt.innerHTML = `${right.join('<br>')}`
       ++current;
       percents = Math.round(current * fraction) + "%"
@@ -143,22 +170,16 @@ function period(e, elName, sec, lvl, l, t) {
       perc.innerHTML = percents
       if (current === totalIdioms) {
         clearAll();
-        reloadButt();
-        return clearInterval(counter)
       }
-      clearInterval(counter)
       setTimeout(function () {
         next();
-        if (!t) {
-          startTimer(sec)
-        }
       }, 1000);
     }
   }
 
   function lost() {
     spanW.innerHTML = ++sw;
-    wrong.unshift(answer);
+    wrong.unshift(Answer);
     wrng.innerHTML = `${wrong.join('<br>')} `
     ++current;
     percents = Math.round(current * fraction) + "%"
@@ -169,75 +190,117 @@ function period(e, elName, sec, lvl, l, t) {
   function checkIfGameLost() {
     if (mistakes === maxWrong) {
       lost()
-      clearInterval(counter)
-      if (!t) {
-        startTimer(sec)
-      }
       setTimeout(function () {
         next();
       }, 1000);
     }
   }
 
-
   function clearAll() {
     mistakes = 0
     clicked = []
-    wsl.innerHTML = ""
-    reveal.innerHTML = ""
+    charLine.innerHTML = ""
+    pinyinLine.innerHTML = ""
     kbd.innerHTML = ""
-    descr.innerHTML = ""
+    wsl.style.display = "none"
+    desc_cont.innerHTML = "Ваш результат"
     rgt.style.display = 'flex'
     wrng.style.display = 'flex'
     rightWrong2.style.display = 'flex'
     rightWrong2.style.justifyContent = 'space-between'
     rightWrong2.style.height = '5vh'
     rightWrong2.style.width = '95%'
+    spanR.disabled = true
+    spanW.disabled = true
   }
+
   function guessedWord() {
-    wordStatus = answer.split('').map(L => (clicked.indexOf(L) >= 0 ? L : " * ")).join('');
-    wsl.innerHTML = wordStatus;
+    wordStatus = Answer.split('').map(L => (clicked.indexOf(L) >= 0 ? L : " * ")).join('');
+    pinyinStatus = Answer.split('').map(L => (clicked.indexOf(L) >= 0 ? pinyin[Answer.indexOf(L)] : " * ")).join(' ');
+    charLine.innerHTML = wordStatus;
+    pinyinLine.innerHTML = pinyinStatus;
   }
+
+  spanW.addEventListener('click', function () {
+    if (desc_cont.innerHTML == undefined) {
+      desc_cont.innerHTML = '))'
+      return
+    }
+
+    if (`${wrong.join('<br>')}` == []) {
+      return
+    } else if (desc_cont.innerHTML == `${wrong.join('<br>')}`) {
+      setTimeout(function () {
+        desc_cont.style.color = 'black'
+        desc_cont.innerHTML = []
+        desc_cont.innerHTML = `<div style="overflow: scroll; padding: 0 autuo;">` +
+        `<div style="color:blue;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</div>` +
+        `<br>` +
+        `<div>${e['examples'][current]}</div>` +
+        `</div>`
+      }, 50)
+    }
+    else {
+      setTimeout(function () {
+        desc_cont.style.color = 'red'
+        desc_cont.innerHTML = []
+        desc_cont.innerHTML = `${wrong.join('<br>')}`
+      }, 20)
+    }
+  })
+  spanR.addEventListener('click', function () {
+    if (desc_cont.innerHTML == undefined) {
+      desc_cont.innerHTML = '))'
+      return
+    }
+    if (`${right.join('<br>')}` == []) {
+      return
+    } else if (desc_cont.innerHTML == `${right.join('<br>')}`) {
+      setTimeout(function () {
+        desc_cont.style.color = 'black'
+        desc_cont.innerHTML = []
+        desc_cont.innerHTML = `<div style="overflow: scroll;">` +
+          `<div style="color:blue;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</div>` +
+          `<br>` +
+          `<div>${e['examples'][current]}</div>` +
+          `</div>`
+      }, 50)
+    }
+    else {
+      setTimeout(function () {
+        desc_cont.style.color = 'green'
+        desc_cont.innerHTML = []
+        desc_cont.innerHTML = `${right.join('<br>')}`
+      }, 20)
+    }
+  })
 
   function next() {
     if (current <= totalIdioms - 1) {
-      mistakes = 0;
-      clicked = [];
-      wsl.innerHTML = "* * * *"
-      descr.innerHTML = e['descriptio'][current];
-      t ? reveal.innerHTML = 'Hints are unavalable in timerless mode' : reveal.innerHTML = e['reveal'][current]
-      generateAnswer();
-      generateButtons();
+      mistakes = 0
+      clicked = []
+      charLine.innerHTML = "* * * *"
+      pinyinLine.innerHTML = "* * * *"
+      desc_cont.innerHTML = `<div style="overflow: scroll;">` +
+          `<div style="color:blue;font-size: calc(20px + 25 * (100vw/1600));">${e['description'][current]}</div>` +
+          `<br>` +
+          `<div>${e['examples'][current]}</div>` +
+          `</div>`
+      desc_cont.style.color = 'black'
+      generateAnswer()
+      generatePinyin()
+      generateButtons()
     } else {
-      clearAll();
-      reloadButt();
+      clearAll()
     }
   }
-
-  function startTimer(time) {
-    counter = setInterval(timer, 1000);
-    function timer() {
-      timerDiv.textContent = time;
-      time--;
-      if (time < 0) {
-        lost()
-        next()
-        if (current === totalIdioms) {
-          return clearInterval(counter)
-        } else {
-          clearInterval(counter)
-          startTimer(sec)
-        }
-      }
-    }
-  }
-
   guessedWord()
   generateButtons()
   generateAnswer()
+  generatePinyin()
 }
 
-const reset = () => {
+const backMenu = function () {
   mistakes = 0
   clicked = []
   current = 0
@@ -252,98 +315,96 @@ const reset = () => {
   spanW.innerHTML = "0"
   bar.style.height = 0
   perc.innerHTML = "0%"
+  wsl.style.display = "flex"
   rgt.style.display = 'none'
   wrng.style.display = 'none'
-  containerGame.style.display = 'flex'
-  mainMenu.style.display = "none"
+  desc_cont.style.color = 'black'
+  rightWrong2.style.display = 'none'
 }
 
-// let idioma = "а"
-// let idioms = "ы"
-// function returnIdiom(arr) {
-//   if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
-// }
+function reset(l, q, catL) {
+  if (l || q) {
+    mainMenu.remove()
+    backMenu()
+    return
+  } else
+  containerGame.remove()
+  wrap.remove()
+  backMenu(catList)
+  mainMenu.append(catL)
+  content.append(mainMenu)
+}
 
-const url = "https://chandao.ru/idiomsEn/"
+let idioma = "а"
+let idioms = "ы"
+function returnIdiom(arr) {
+  if (arr === 1) { return idioma } else if (arr === 0 || arr >= 5) { return "" } else if (arr === 2 || 3 || 4) { return idioms }
+}
 
-fetch(url).then(
-  (res) => res.json()).then(function (data) {
-    rounds = data;
-    const st = "Online"
-    onOffLine(rounds, st)
-
-  }).catch((e) => {
-    console.log(e)
-    itr = iterable()
-    const st = "Offline or serverside failure"
-    onOffLine(itr, st)
-  })
-
-function onOffLine(itr, stat) {
-  let levels = function (sec, bt, lvl) {
+function onOffLine(itr) {
+  let levels = function (bt) {
     btns.forEach(btn => {
       btn.style.background = "rgb(190, 240, 241)" ? btn.style.background = "#eef2f3" : btn.style.background = "rgb(190, 240, 241)"
     })
     catList.innerHTML = ""
     bt.style.background = "rgb(190, 240, 241)"
 
-     if (bt === timerLess) {
-      let tmr = true
+    if (bt === learnBtn) {
+      let learn = true
+
       itr.forEach(function (el, inx, arr) {
-        shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
+        shuffle(itr[inx]['answer'], itr[inx]['description'], itr[inx]['examples'])
         let l = document.createElement('li')
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Idioms</div>`
+
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Идиом${returnIdiom(el["description"].length)}</div>`
         l.style.listStyleType = "none"
         catList.appendChild(l)
         l.addEventListener('click', function () {
-          reset()
-          period(el, el['name'], null, null, null, tmr)
+          reset(learn, null, null)
+          period(el, el['name'], learn)
+
+        })
+      })
+    } else {
+      itr.forEach(function (el, inx, arr) {
+        let quiz = true
+        shuffle(itr[inx]['answer'], itr[inx]['description'], itr[inx]['examples'])
+        let l = document.createElement('li')
+        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["description"].length} Идиом${returnIdiom(el["description"].length)}</div>`
+        l.style.listStyleType = "none"
+        catList.append(l)
+        l.addEventListener('click', function () {
+          reset(null, quiz, null)
+          period(el, el['name'], null)
+
         })
       })
     }
-    else
-      itr.forEach(function (el, inx, arr) {
-        shuffle(itr[inx]['reveal'], itr[inx]['descriptio'])
-        let l = document.createElement('li')
-        l.innerHTML = `${el['name']} <div style="color: black; font-size: calc(10px + 15 * (100vw/1600));">${el["descriptio"].length} Idioms</div>`
-        l.style.listStyleType = "none"
-        catList.appendChild(l)
-        l.addEventListener('click', function () {
-          reset()
-          period(el, el['name'], sec, lvl)
-        })
-      })
   }
- 
-  btnOverlay1.onclick = () => {
-    levels(25, btnOverlay1, 1)
-  }
-
-  btnOverlay2.onclick = () => {
-    levels(20, btnOverlay2, 2)
-  }
-
-  btnOverlay3.onclick = () => {
-    levels(15, btnOverlay3, 3)
-  }
-
-  btnOverlay4.onclick = () => {
-    levels(10, btnOverlay4, 4)
+  learnBtn.onclick = () => {
+    levels(learnBtn)
   }
 
   timerLess.onclick = () => {
-    levels(null, timerLess, null)
+    levels(timerLess)
   }
-  stat==="Online"
-  ?sourse.innerHTML = `<div style="color: green;">${stat}</div>`
-  :sourse.innerHTML = `<div style="color: red;">${stat}</div>`
 }
 
-let defaultInstallEvent = null
-window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault()
-  defaultInstallEvent = event
-})
-learnBtn.addEventListener('click', (event) => {
-  defaultInstallEvent.prompt()
-})
+document.addEventListener('click', (e) => {
+  
+   if (e.target.closest('.titleAbout')) dropDown.classList.add('show')
+   if (e.target.closest('.titleAbout')) dropDownLearn.classList.add('show')
+ 
+   if (!about.contains(e.target)) dropDown.classList.remove('show')
+   if (!cat.contains(e.target)) dropDownLearn.classList.remove('show')
+ })
+
+const url = "serveridioms.json"
+fetch(url).then(
+  (res) => res.json()).then(function (data) {
+    localStorage.setItem("idioms", JSON.stringify(data))
+    onOffLine(data)
+
+  }).catch((e) => {
+    onOffLine(JSON.parse(localStorage.getItem("idioms")))
+  })

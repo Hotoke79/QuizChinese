@@ -1,4 +1,4 @@
-const containerGame = document.querySelector('.containerGame')
+let content = document.querySelector('.content')
 
 //create Main menu
 const mainMenu = document.createElement('div')
@@ -6,11 +6,7 @@ mainMenu.setAttribute('class', 'mainMenu')
 
 const learnBtn = document.createElement('div')
 learnBtn.setAttribute('class', 'learn')
-learnBtn.setAttribute('id', 'pwa-install')
-learnBtn.innerText ="Install app"
-
-const btnContainer = document.createElement('div')
-btnContainer.setAttribute('id', 'btnContainer')
+learnBtn.innerText ="Содержание"
 
 var myHtml = '<div class="cont">' +
   '                <div class="boxx">' +
@@ -24,68 +20,49 @@ var myHtml = '<div class="cont">' +
   '                    <span style="--i:16;">成语师傅</span>' +
   '                </div>' +
   '            </div>';
-const selectMode = "Select mode"
+const selectMode = "Chengyu Shifu"
 const catList = document.createElement('div')
 catList.setAttribute("id", "catList")
 catList.innerHTML=`${selectMode}${myHtml}`
 
-const btnOverlay1 = document.createElement('div')
-btnOverlay1.innerHTML = "Test 1 <br> 25 sec"
-btnOverlay1.setAttribute('class', 'menuOpts')
-const btnOverlay2 = document.createElement('div')
-btnOverlay2.innerHTML = "Test 2 <br> 20 sec"
-btnOverlay2.setAttribute('class', 'menuOpts')
-const btnOverlay3 = document.createElement('div')
-btnOverlay3.innerHTML = `Test 3 <br> 15 sec`
-btnOverlay3.setAttribute('class', 'menuOpts')
-const btnOverlay4 = document.createElement('div')
-btnOverlay4.innerHTML = "Test 4 <br> 10 sec"
-btnOverlay4.setAttribute('class', 'menuOpts')
-
 const timerLess = document.createElement('div')
 timerLess.setAttribute('class', 'learn')
-timerLess.innerText ="Without timer"
+timerLess.innerText ="Викторина"
 
-const sourse = document.createElement('div')
-sourse.setAttribute('class', 'sourse')
-sourse.innerText ="loading..."
+const btns = [learnBtn, timerLess]
 
-const btns = [learnBtn,btnOverlay1, btnOverlay2, btnOverlay3, btnOverlay4, timerLess]
-
-btnContainer.append(btnOverlay1, btnOverlay2, btnOverlay3, btnOverlay4)
-
-mainMenu.append(sourse,learnBtn, btnContainer, timerLess, catList)
+mainMenu.append(learnBtn, timerLess, catList)
 
 //create header
+const containerGame = document.createElement('div')
+containerGame.setAttribute("class", "containerGame")
+
 const menuBtn = document.createElement('div')
 menuBtn.setAttribute("class", "menuBtn")
-menuBtn.innerText = "MENU"
+menuBtn.innerText = "МЕНЮ"
 
 menuBtn.addEventListener('click', function () {
-  window.location.reload()
+  reset(null, null, catList)
 })
+
+const catWrp = document.createElement('div')
+catWrp.setAttribute("class", "menuBtn")
 
 const about = document.createElement('div')
 about.setAttribute("class", "titleAbout")
 
-const level = document.createElement('div')
-level.setAttribute("class", "levelDiv")
+const dropDown = document.createElement('div')
+dropDown.setAttribute("class", "dropDown")
 
-const timerDiv = document.createElement('div')
-timerDiv.setAttribute("id", "timerDiv")
-timerDiv.innerText = "00"
+//about.append(dropDown)
+catWrp.append(about, dropDown)
 
 const header = document.createElement('div')
 header.setAttribute("class", "header")
-header.append(menuBtn, about, timerDiv)
+header.append(menuBtn, catWrp)
 
 const desc_cont = document.createElement('div')
 desc_cont.setAttribute("class", "desript-container")
-const descr = document.createElement('div')
-descr.setAttribute("class", "descr")
-const reveal = document.createElement('div')
-reveal.setAttribute("class", "reveal")
-desc_cont.append(descr, reveal)
 
 const rWr = document.createElement('div')
 rWr.setAttribute("class", "rightWrong")
@@ -93,7 +70,7 @@ rWr.setAttribute("class", "rightWrong")
 const notGsd = document.createElement('div')
 notGsd.setAttribute("id", "notGuessed")
 notGsd.innerHTML = "Wrong"
-const spanW = document.createElement('span')
+const spanW = document.createElement('button')
 spanW.setAttribute("id", "scoreWrong")
 spanW.innerHTML = 0
 notGsd.appendChild(spanW)
@@ -114,7 +91,7 @@ rWr.appendChild(prg_out)
 const gsd = document.createElement('div')
 gsd.setAttribute("id", "guessed")
 gsd.innerHTML = "Right"
-const spanR = document.createElement('span')
+const spanR = document.createElement('button')
 spanR.setAttribute("id", "scoreRight")
 spanR.innerHTML = 0
 gsd.appendChild(spanR)
@@ -131,15 +108,20 @@ rightWrong2.appendChild(rgt)
 
 const wsl = document.createElement('div')
 wsl.setAttribute("id", "wordSpotLight")
+const charLine = document.createElement('div')
+charLine.setAttribute("id", "charLine")
+const pinyinLine = document.createElement('div')
+pinyinLine.setAttribute("id", "pinyinLine")
+wsl.append(charLine, pinyinLine)
+
 const kbd = document.createElement('div')
 kbd.setAttribute("id", "keyboard")
-containerGame.append(header, level, desc_cont, rWr, rightWrong2, wsl, kbd)
-containerGame.style.display = 'none'
+containerGame.append(header, desc_cont, rWr, rightWrong2, wsl, kbd)
+containerGame.remove()
 
 //learn page
 const wrap = document.createElement('div')
 wrap.setAttribute("class", "wrapper")
-wrap.style.display="none"
 
 const head = document.createElement('div')
 head.setAttribute("class", "header")
@@ -148,13 +130,15 @@ const mB = document.createElement('div')
 mB.setAttribute("class", "menuBtn")
 mB.innerText="МЕНЮ"
 
+const cat = document.createElement('div')
+cat.setAttribute("class", "titleAbout")
+const dropDownLearn = document.createElement('div')
+dropDownLearn.setAttribute("class", "dropDown")
+
 const catWrap = document.createElement('div')
 catWrap.setAttribute("class", "menuBtn")
 
-const cat = document.createElement('div')
-cat.setAttribute("class", "titleAbout")
-
-catWrap.append(cat)
+catWrap.append(cat, dropDownLearn)
 head.append(mB, catWrap)
 
 const stDsc = document.createElement('div')
@@ -174,9 +158,9 @@ dir.append(prev, nxt)
 
 wrap.append(head, stDsc, dir)
 
-
 mB.onclick = ()=>{
-  window.location.reload()
+  reset(null, null, catList)
 }
 
-document.body.append(mainMenu, wrap, containerGame)
+content.appendChild(mainMenu)
+document.body.append(content)
