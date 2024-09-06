@@ -512,13 +512,14 @@ body {
     opacity: 1;
 }
 .hnt{
-    color: darkcyan;
-    opacity: 0.1;
+    /* color: darkcyan;
+    opacity: 0.1; */
+    background: #000;
 }
-/* .hnt:hover{
+.hnt:hover{
     color: #f11444;
-    opacity: 1;
-} */
+    /* opacity: 1; */
+}
 .norm{
     color: black;
     opacity: 1; 

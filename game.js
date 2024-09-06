@@ -399,7 +399,8 @@ document.addEventListener('click', (e) => {
    if (!cat.contains(e.target)) dropDownLearn.classList.remove('show')
  })
 
-const url = "https://chandao.ru/idiomsEn/"
+//const url = "https://chandao.ru/idiomsEn/"
+const url = "idiomsEn.json"
 fetch(url).then(
   (res) => res.json()).then(function (data) {
     localStorage.setItem("idioms", JSON.stringify(data))
